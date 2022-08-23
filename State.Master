@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/POPS.Master" AutoEventWireup="true" CodeBehind="State.master.cs" Inherits="State.State" %>
+
+<asp:Content ID="HeadPublic" ContentPlaceHolderID="HeadMaster" runat="server">
+    <telerik:RadCodeBlock ID="RCB_" runat="server">
+        <script type="text/javascript">
+            window.onresize = function() { FitToPage(); }
+
+            //Place holder var for embeded splitter in the content area
+            var embededChildSplitterID = null;
+
+            function FitToPage() {
+                //alert("FitToPage");
+                var contentDiv = document.getElementById("<%=StateMasterSplitter.ClientID %>");
+                var winHeight = document.documentElement.clientHeight;
+                var winWidth = document.documentElement.clientHeight;
+
+                if (winHeight > 300) {
+                    newHeight = winHeight - 128;
+                    var mainSplitter = $find("<%=StateMasterSplitter.ClientID %>");
+                    //Service for maintaining the UI state of the application
+                    Service.PersistUI.SetSplitterHeight(newHeight);
+
+                    if (null != mainSplitter) {
+                        mainSplitter.resize(null, newHeight); //Arg1 = width, Arg2 = height
+                        mainSplitter.set_height(newHeight);
+
+                        var embededChildSplitter = $find(embededChildSplitterID)
+                        if (null != embededChildSplitter) {
+                            embededChildSplitter.resize(null, newHeight);
+                            embededChildSplitter.set_height(newHeight);
+                        }
+
+                        var embededGridContent = $find(embededGridID);
+                        var checkLogViewTypeDiv = $find(checkLogViewTypeID);
+                        
+                        if (null != embededGridContent) {
+                            //alert(checkLogViewTypeDiv);
+                            //.get_element().style.height = args.get_newValue() + "px";
+                            //if (null != checkLogViewTypeDiv)
+                               // alert(checkLogViewTypeDiv.visible);
+                                
+                            embededGridContent.get_element().style.height = (newHeight - 3) + "px";
+                            //embededChildSplitter.set_height(newHeight);
+                        }
+                    }
+                }
+            }
+        </script>
+    </telerik:RadCodeBlock>
+</asp:Content>
+<asp:Content ID="MenuContentState" ContentPlaceHolderID="menu_Content" runat="server">
+        <telerik:RadFormDecorator ID="LicFormdecorator" runat="server" DecoratedControls="Buttons,CheckBoxes,Label,Select" EnableRoundedCorners="false" />
+<%--        <telerik:RadMenu ID="StateMenu" Runat="server" EnableOverlay="true" style="top: 0px; left: 0px; height: 18px; width: 934px;">
+        <DefaultGroupSettings Flow="Horizontal"  ExpandDirection="Down" />
+        <Items>
+            <telerik:RadMenuItem runat="server" Text="" Visible="false"/>
+        </Items>
+    </telerik:RadMenu>--%>
+</asp:Content>
+<asp:Content ID="MainContentState" ContentPlaceHolderID="M_Content" runat="server">
+    <telerik:RadSplitter ID="StateMasterSplitter" runat="server" Width="934" VisibleDuringInit="true" >
+        <telerik:RadPane ID="navigationPane" runat="server" Width="200" Scrolling="None" BackColor="#336699" >
+            <asp:ContentPlaceHolder ID="Left_Menu_Content" runat="server" />
+        </telerik:RadPane>
+        <telerik:RadSplitBar ID="VSplitBar" runat="server" CollapseMode="Forward" />
+        <telerik:RadPane ID="contentPane" runat="server" Scrolling="none">
+            <asp:ContentPlaceHolder ID="Right_Content" runat="server" />
+        </telerik:RadPane>
+    </telerik:RadSplitter>
+</asp:Content>
+

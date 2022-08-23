@@ -1,0 +1,1471 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{17A46F0E-7198-4536-9393-6D8C730E2EB7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>State</RootNamespace>
+    <AssemblyName>State</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SccProjectName>"%24/WEB/POPS/State", TBGAAAAA</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AtgWebUI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\POPS\State\bin\AtgWebUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Telerik.Web.Design, Version=2009.2.701.35, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Telerik.Web.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2009.2.701.35, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\POPS\State\bin\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AppControl\AffiliationOffsite.ascx" />
+    <Content Include="AppControl\AffiliationOffsiteEditForm.ascx" />
+    <Content Include="AppControl\AplctnProvider.ascx" />
+    <Content Include="AppControl\AppAttachment.ascx" />
+    <Content Include="AppControl\ApplicationItems.ascx" />
+    <Content Include="AppControl\AspenCommentsForm.ascx" />
+    <Content Include="AppControl\BedDetails.ascx" />
+    <Content Include="AppControl\BedRecEditForm.ascx" />
+    <Content Include="AppControl\ProgramStaffForm.ascx" />
+    <Content Include="AppControl\ProgramStaff.ascx" />
+    <Content Include="AppControl\EducationEditForm.ascx" />
+    <Content Include="AppControl\EmploymentEditForm.ascx" />
+    <Content Include="AppControl\Facility.ascx" />
+    <Content Include="AppControl\FacilityApplications.ascx" />
+    <Content Include="AppControl\FacilityAS400Comments.ascx" />
+    <Content Include="AppControl\FacilityBeds.ascx" />
+    <Content Include="AppControl\FacilityDates.ascx" />
+    <Content Include="AppControl\FacilityDetails.ascx" />
+    <Content Include="AppControl\FacilityKeyPersonnel.ascx" />
+    <Content Include="AppControl\FacilityOffiste.ascx" />
+    <Content Include="AppControl\FacilityOperatingDetails.ascx" />
+    <Content Include="AppControl\FacilityOwnership.ascx" />
+    <Content Include="AppControl\FacilityPayments.ascx" />
+    <Content Include="AppControl\FacilitySpecialtyUnit.ascx" />
+    <Content Include="AppControl\FacilitySummary.ascx" />
+    <Content Include="AppControl\GenericATGGrid.ascx" />
+    <Content Include="AppControl\LetterOfIntentControl.ascx" />
+    <Content Include="AppControl\LicActivityEditForm.ascx" />
+    <Content Include="AppControl\License.ascx" />
+    <Content Include="AppControl\ListLetterOfIntentControl.ascx" />
+    <Content Include="AppControl\ListLicenceLetter.ascx" />
+    <Content Include="AppControl\LOIMatchFormControl.ascx" />
+    <Content Include="AppControl\MessageCenter.ascx" />
+    <Content Include="AppControl\OwnerEditForm.ascx" />
+    <Content Include="AppControl\Ownership.ascx" />
+    <Content Include="AppControl\OwnFacOtherEditForm.ascx" />
+    <Content Include="AppControl\ReportParameters.ascx" />
+    <Content Include="AppControl\RequestForAccessControl.ascx" />
+    <Content Include="AppControl\Services.ascx" />
+    <Content Include="AppControl\SpecialtyUnit.ascx" />
+    <Content Include="App_Themes\LAWeb20\Ajax.LAWeb20.css" />
+    <Content Include="App_Themes\LAWeb20\Ajax\LAWeb20.gif" />
+    <Content Include="App_Themes\LAWeb20\Calendar.LAWeb20.css" />
+    <Content Include="App_Themes\LAWeb20\Calendar\HoverBgTime.gif" />
+    <Content Include="App_Themes\LAWeb20\Calendar\LAWeb20.gif" />
+    <Content Include="App_Themes\LAWeb20\Calendar\sprite.gif" />
+    <Content Include="App_Themes\LAWeb20\Chart\LAWeb20.gif" />
+    <Content Include="App_Themes\LAWeb20\ColorPicker.LAWeb20.css" />
+    <Content Include="App_Themes\LAWeb20\ColorPicker\ColorPickerSprites.gif" />
+    <Content Include="App_Themes\LAWeb20\ColorPicker\LAWeb20.gif" />
+    <Content Include="App_Themes\LAWeb20\ComboBox.LAWeb20.css" />
+    <Content Include="App_Themes\LAWeb20\ComboBox\LAWeb20.gif" />
+    <Content Include="App_Themes\LAWeb20\ComboBox\rcbSprite.png" />
+    <Content Include="App_Themes\LAWeb20\Common\loading.gif" />
+    <Content Include="App_Themes\LAWeb20\Common\loading_small.gif" />
+    <Content Include="App_Themes\LAWeb20\DatePicker\LAWeb20.gif" />
+    <Content Include="App_Themes\LAWeb20\DateTimePicker\LAWeb20.gif" />
+    <Content Include="App_Themes\LAWeb20\Dock.LAWeb20.css" />
+    <Content Include="App_Themes\LAWeb20\Dock\DockCommandSprites.gif" />
+    <Content Include="App_Themes\LAWeb20\Dock\LAWeb20.gif" />
+    <Content Include="App_Themes\LAWeb20\Dock\rdHTitle.gif" />
+    <Content Include="App_Themes\LAWeb20\Editor.LAWeb20.css" />
+    <Content Include="App_Themes\LAWeb20\Editor\LAWeb20.gif" />
+    <Content Include="App_Themes\LAWeb20\Editor\LoadingSpell.gif" />
+    <Content Include="App_Themes\LAWeb20\Editor\ToolBarSprites.gif" />
+    <Content Include="App_Themes\LAWeb20\Editor\ToolbarVerticalSprites.gif" />
+    <Content Include="App_Themes\LAWeb20\FileExplorer\LAWeb20.gif" />
+    <Content Include="App_Themes\LAWeb20\FormDecorator.LAWeb20.css" />
+    <Content Include="App_Themes\LAWeb20\FormDecorator\ButtonSprites.gif" />
+    <Content Include="App_Themes\LAWeb20\FormDecorator\CheckBoxSprites.gif" />
+    <Content Include="App_Themes\LAWeb20\FormDecorator\ComboSprites.gif" />
+    <Content Include="App_Themes\LAWeb20\FormDecorator\FieldsetBgr.png" />
+    <Content Include="App_Themes\LAWeb20\FormDecorator\LAWeb20.gif" />
+    <Content Include="App_Themes\LAWeb20\FormDecorator\RadioButtonSprites.gif" />
+    <Content Include="App_Themes\LAWeb20\FormDecorator\RadioButtonSprites.png" />
+    <Content Include="App_Themes\LAWeb20\Grid.LAWeb20.css" />
+    <Content Include="App_Themes\LAWeb20\Grid\AddRecord.gif" />
+    <Content Include="App_Themes\LAWeb20\Grid\Cancel.gif" />
+    <Content Include="App_Themes\LAWeb20\Grid\Delete.gif" />
+    <Content Include="App_Themes\LAWeb20\Grid\Edit.gif" />
+    <Content Include="App_Themes\LAWeb20\Grid\Filter.gif" />
+    <Content Include="App_Themes\LAWeb20\Grid\LAWeb20.gif" />
+    <Content Include="App_Themes\LAWeb20\Grid\MoveDown.gif" />
+    <Content Include="App_Themes\LAWeb20\Grid\MoveUp.gif" />
+    <Content Include="App_Themes\LAWeb20\Grid\PagingFirst.gif" />
+    <Content Include="App_Themes\LAWeb20\Grid\PagingLast.gif" />
+    <Content Include="App_Themes\LAWeb20\Grid\PagingNext.gif" />
+    <Content Include="App_Themes\LAWeb20\Grid\PagingPrev.gif" />
+    <Content Include="App_Themes\LAWeb20\Grid\Refresh.gif" />
+    <Content Include="App_Themes\LAWeb20\Grid\SingleMinus.gif" />
+    <Content Include="App_Themes\LAWeb20\Grid\SinglePlus.gif" />
+    <Content Include="App_Themes\LAWeb20\Grid\SortAsc.gif" />
+    <Content Include="App_Themes\LAWeb20\Grid\SortDesc.gif" />
+    <Content Include="App_Themes\LAWeb20\Grid\sprite.gif" />
+    <Content Include="App_Themes\LAWeb20\Grid\Update.gif" />
+    <Content Include="App_Themes\LAWeb20\Input.LAWeb20.css" />
+    <Content Include="App_Themes\LAWeb20\Input\LAWeb20.gif" />
+    <Content Include="App_Themes\LAWeb20\Input\sprite.gif" />
+    <Content Include="App_Themes\LAWeb20\ListBox.LAWeb20.css" />
+    <Content Include="App_Themes\LAWeb20\ListBox\LAWeb20.gif" />
+    <Content Include="App_Themes\LAWeb20\ListBox\rlbButtonDisabled.png" />
+    <Content Include="App_Themes\LAWeb20\ListBox\rlbButtonDisabledIE6.png" />
+    <Content Include="App_Themes\LAWeb20\ListBox\rlbButtonHover.png" />
+    <Content Include="App_Themes\LAWeb20\ListBox\rlbButtonHoverIE6.png" />
+    <Content Include="App_Themes\LAWeb20\ListBox\rlbButtonNormal.png" />
+    <Content Include="App_Themes\LAWeb20\ListBox\rlbButtonNormalIE6.png" />
+    <Content Include="App_Themes\LAWeb20\ListBox\rlbDropClue.png" />
+    <Content Include="App_Themes\LAWeb20\ListBox\rlbSprite.png" />
+    <Content Include="App_Themes\LAWeb20\Menu.LAWeb20.css" />
+    <Content Include="App_Themes\LAWeb20\Menu\LAWeb20.gif" />
+    <Content Include="App_Themes\LAWeb20\Menu\rmSprite.png" />
+    <Content Include="App_Themes\LAWeb20\Menu\rmVSprite.png" />
+    <Content Include="App_Themes\LAWeb20\PanelBar.LAWeb20.css" />
+    <Content Include="App_Themes\LAWeb20\PanelBar\Expandable.png" />
+    <Content Include="App_Themes\LAWeb20\PanelBar\LAWeb20.gif" />
+    <Content Include="App_Themes\LAWeb20\PanelBar\RootItemBg.gif" />
+    <Content Include="App_Themes\LAWeb20\Rotator.LAWeb20.css" />
+    <Content Include="App_Themes\LAWeb20\Rotator\LAWeb20.gif" />
+    <Content Include="App_Themes\LAWeb20\Rotator\RotatorButtons.gif" />
+    <Content Include="App_Themes\LAWeb20\Scheduler.LAWeb20.css" />
+    <Content Include="App_Themes\LAWeb20\Scheduler\LAWeb20.gif" />
+    <Content Include="App_Themes\LAWeb20\Scheduler\rsAppointmentBg.png" />
+    <Content Include="App_Themes\LAWeb20\Scheduler\rsInlineEditHSprite.png" />
+    <Content Include="App_Themes\LAWeb20\Scheduler\rsInlineEditVSprite.png" />
+    <Content Include="App_Themes\LAWeb20\Scheduler\rsModalOuterBg.png" />
+    <Content Include="App_Themes\LAWeb20\Scheduler\rsModalOuterTitleBg.png" />
+    <Content Include="App_Themes\LAWeb20\Scheduler\rsSprites.png" />
+    <Content Include="App_Themes\LAWeb20\Slider.LAWeb20.css" />
+    <Content Include="App_Themes\LAWeb20\Slider\DragHandle.gif" />
+    <Content Include="App_Themes\LAWeb20\Slider\DragVerticalHandle.gif" />
+    <Content Include="App_Themes\LAWeb20\Slider\Handles.gif" />
+    <Content Include="App_Themes\LAWeb20\Slider\HandlesVertical.gif" />
+    <Content Include="App_Themes\LAWeb20\Slider\ItemHorizontalBgr.gif" />
+    <Content Include="App_Themes\LAWeb20\Slider\ItemVerticalBgr.gif" />
+    <Content Include="App_Themes\LAWeb20\Slider\LargeChangeHorizontal.gif" />
+    <Content Include="App_Themes\LAWeb20\Slider\LargeChangeMiddleHorizontal.gif" />
+    <Content Include="App_Themes\LAWeb20\Slider\LargelChangeCenterVertical.gif" />
+    <Content Include="App_Themes\LAWeb20\Slider\LargelChangeVertical.gif" />
+    <Content Include="App_Themes\LAWeb20\Slider\LAWeb20.gif" />
+    <Content Include="App_Themes\LAWeb20\Slider\SelectedRegionHorizontalBgr.gif" />
+    <Content Include="App_Themes\LAWeb20\Slider\SelectedRegionVerticalBgr.gif" />
+    <Content Include="App_Themes\LAWeb20\Slider\SmallChangeCenterVertical.gif" />
+    <Content Include="App_Themes\LAWeb20\Slider\SmallChangeHorizontal.gif" />
+    <Content Include="App_Themes\LAWeb20\Slider\SmallChangeMiddleHorizontal.gif" />
+    <Content Include="App_Themes\LAWeb20\Slider\SmallChangeVertical.gif" />
+    <Content Include="App_Themes\LAWeb20\Slider\TrackBgr.gif" />
+    <Content Include="App_Themes\LAWeb20\Slider\TrackVerticalBgr.gif" />
+    <Content Include="App_Themes\LAWeb20\Spell\LAWeb20.gif" />
+    <Content Include="App_Themes\LAWeb20\Splitter.LAWeb20.css" />
+    <Content Include="App_Themes\LAWeb20\Splitter\ExpandCollapseBarsCommands.gif" />
+    <Content Include="App_Themes\LAWeb20\Splitter\LAWeb20.gif" />
+    <Content Include="App_Themes\LAWeb20\Splitter\ResizeBarHorizontalSprites.gif" />
+    <Content Include="App_Themes\LAWeb20\Splitter\ResizeBarVerticalSprites.gif" />
+    <Content Include="App_Themes\LAWeb20\Splitter\slideTitleContainerBgr.gif" />
+    <Content Include="App_Themes\LAWeb20\TabStrip.LAWeb20.css" />
+    <Content Include="App_Themes\LAWeb20\TabStrip\LAWeb20.gif" />
+    <Content Include="App_Themes\LAWeb20\TabStrip\TabStripStates.png" />
+    <Content Include="App_Themes\LAWeb20\TabStrip\TabStripVStates.png" />
+    <Content Include="App_Themes\LAWeb20\TimePicker\LAWeb20.gif" />
+    <Content Include="App_Themes\LAWeb20\ToolBar.LAWeb20.css" />
+    <Content Include="App_Themes\LAWeb20\ToolBar\LAWeb20.gif" />
+    <Content Include="App_Themes\LAWeb20\ToolBar\rtbActiveBg.png" />
+    <Content Include="App_Themes\LAWeb20\ToolBar\rtbClickedBg.png" />
+    <Content Include="App_Themes\LAWeb20\ToolBar\rtbControlBg.png" />
+    <Content Include="App_Themes\LAWeb20\ToolBar\rtbDropArrows.png" />
+    <Content Include="App_Themes\LAWeb20\ToolBar\rtbDropDownBg.png" />
+    <Content Include="App_Themes\LAWeb20\ToolBar\rtbDropDownHover.png" />
+    <Content Include="App_Themes\LAWeb20\ToolBar\rtbHoverBg.png" />
+    <Content Include="App_Themes\LAWeb20\ToolBar\rtbHoverDropArrows.png" />
+    <Content Include="App_Themes\LAWeb20\ToolBar\rtbVerticalControlBg.png" />
+    <Content Include="App_Themes\LAWeb20\ToolTip.LAWeb20.css" />
+    <Content Include="App_Themes\LAWeb20\ToolTip\Callouts.gif" />
+    <Content Include="App_Themes\LAWeb20\ToolTip\LAWeb20.gif" />
+    <Content Include="App_Themes\LAWeb20\ToolTip\Loading.gif" />
+    <Content Include="App_Themes\LAWeb20\ToolTip\ToolTipSprites.gif" />
+    <Content Include="App_Themes\LAWeb20\ToolTip\ToolTipVerticalSprites.gif" />
+    <Content Include="App_Themes\LAWeb20\TreeView.LAWeb20.css" />
+    <Content Include="App_Themes\LAWeb20\TreeView\LAWeb20.gif" />
+    <Content Include="App_Themes\LAWeb20\TreeView\PlusMinus.png" />
+    <Content Include="App_Themes\LAWeb20\TreeView\TriState.png" />
+    <Content Include="App_Themes\LAWeb20\Upload.LAWeb20.css" />
+    <Content Include="App_Themes\LAWeb20\Upload\LAWeb20.gif" />
+    <Content Include="App_Themes\LAWeb20\Upload\ruProgress.gif" />
+    <Content Include="App_Themes\LAWeb20\Upload\ruProgressArea.png" />
+    <Content Include="App_Themes\LAWeb20\Upload\ruSprite.png" />
+    <Content Include="App_Themes\LAWeb20\Widgets.LAWeb20.css" />
+    <Content Include="App_Themes\LAWeb20\Widgets\ActionButtonBgr.gif" />
+    <Content Include="App_Themes\LAWeb20\Widgets\CommitButtonsBgr.gif" />
+    <Content Include="App_Themes\LAWeb20\Widgets\DialogToolbarButtonSprites.gif" />
+    <Content Include="App_Themes\LAWeb20\Widgets\FileDelete.gif" />
+    <Content Include="App_Themes\LAWeb20\Widgets\FileExtensionSprites.gif" />
+    <Content Include="App_Themes\LAWeb20\Widgets\FileFolder.gif" />
+    <Content Include="App_Themes\LAWeb20\Widgets\FileGif.gif" />
+    <Content Include="App_Themes\LAWeb20\Widgets\FileListReload.gif" />
+    <Content Include="App_Themes\LAWeb20\Widgets\FileListView.gif" />
+    <Content Include="App_Themes\LAWeb20\Widgets\FileManagerGridHeader.gif" />
+    <Content Include="App_Themes\LAWeb20\Widgets\FileTreeView.gif" />
+    <Content Include="App_Themes\LAWeb20\Widgets\FileUpload.gif" />
+    <Content Include="App_Themes\LAWeb20\Widgets\LevelUp.gif" />
+    <Content Include="App_Themes\LAWeb20\Widgets\NewFolder.gif" />
+    <Content Include="App_Themes\LAWeb20\Widgets\SortingArrows.gif" />
+    <Content Include="App_Themes\LAWeb20\Widgets\TabstripIconSprites.gif" />
+    <Content Include="App_Themes\LAWeb20\Widgets\TabStripImages.gif" />
+    <Content Include="App_Themes\LAWeb20\Window.LAWeb20.css" />
+    <Content Include="App_Themes\LAWeb20\Window\CommandButtonSprites.gif" />
+    <Content Include="App_Themes\LAWeb20\Window\LAWeb20.gif" />
+    <Content Include="App_Themes\LAWeb20\Window\WindowHorizontalSprites.gif" />
+    <Content Include="App_Themes\LAWeb20\Window\WindowVerticalSprites.gif" />
+    <Content Include="App_Themes\LAWeb20\Window\WindowVerticalSprites.png" />
+    <Content Include="Common\DocHome.aspx" />
+    <Content Include="Common\DocPrint.aspx" />
+    <Content Include="Common\EditForm\AffiliationForm.aspx" />
+    <Content Include="Common\EditForm\AspenComments.aspx" />
+    <Content Include="Common\EditForm\ProgramStaffForm.aspx" />
+    <Content Include="Common\FileUpload.aspx" />
+    <Content Include="Common\FileViewer.aspx" />
+    <Content Include="Common\report.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="DHH\LettersPrint.aspx" />
+    <Content Include="DHH\LoginLetterPrint.aspx" />
+    <Content Include="DHH\StateHome.aspx" />
+    <Content Include="DHH\StateLicensePage.aspx" />
+    <Content Include="DHH\StateReportsPrint.aspx" />
+    <Content Include="images\AddRecord.gif" />
+    <Content Include="images\bg_button_a.gif" />
+    <Content Include="images\bg_button_span.gif" />
+    <Content Include="images\Cancel.gif" />
+    <Content Include="images\checkmarkblank.png" />
+    <Content Include="images\checkmarkgreen.png" />
+    <Content Include="images\checkmarkred.png" />
+    <Content Include="images\Delete.gif" />
+    <Content Include="images\DHH_LogoHrzntl_small.jpg" />
+    <Content Include="images\DHH_Logo_Small.jpg" />
+    <Content Include="images\Edit.gif" />
+    <Content Include="images\greencheckmark.gif" />
+    <Content Include="images\headback1.jpg" />
+    <Content Include="images\HeadBack_State.jpg" />
+    <Content Include="images\Insert.gif" />
+    <Content Include="images\leftback1.jpg" />
+    <Content Include="images\license.gif" />
+    <Content Include="images\LoginBack.gif" />
+    <Content Include="images\LOILogo.jpg" />
+    <Content Include="images\mail.gif" />
+    <Content Include="images\Print.gif" />
+    <Content Include="images\Refresh.gif" />
+    <Content Include="images\RootItemBg.gif" />
+    <Content Include="images\seal_la.gif" />
+    <Content Include="images\Text preview.gif" />
+    <Content Include="images\Update.gif" />
+    <Content Include="Include\AtgWebUI.js" />
+    <Content Include="Include\Common.js" />
+    <Content Include="Service\PersistUI.asmx" />
+    <Content Include="style\AtgWebUI.css" />
+    <Content Include="style\Master.css" />
+    <Content Include="style\PopupMaster.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppControl\AspenCommentsForm.ascx.cs">
+      <DependentUpon>AspenCommentsForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\AspenCommentsForm.ascx.designer.cs">
+      <DependentUpon>AspenCommentsForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\ProgramStaffForm.ascx.cs">
+      <DependentUpon>ProgramStaffForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\ProgramStaffForm.ascx.designer.cs">
+      <DependentUpon>ProgramStaffForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\ProgramStaff.ascx.cs">
+      <DependentUpon>ProgramStaff.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\ProgramStaff.ascx.designer.cs">
+      <DependentUpon>ProgramStaff.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\Personnel.ascx.cs">
+      <DependentUpon>Personnel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\Personnel.ascx.designer.cs">
+      <DependentUpon>Personnel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\PersonnelForm.ascx.cs">
+      <DependentUpon>PersonnelForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\PersonnelForm.ascx.designer.cs">
+      <DependentUpon>PersonnelForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ATG\BusinessObject\BO_ApplicationAccess.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ApplicationAccessBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ApplicationAccesses.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ApplicationSupport.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ApplicationSupportBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ApplicationSupportPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ApplicationSupports.cs" />
+    <Compile Include="ATG\BusinessObject\BO_AspenComment.cs" />
+    <Compile Include="ATG\BusinessObject\BO_AspenCommentBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_AspenCommentPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_AspenComments.cs" />
+    <Compile Include="ATG\GridHelper\GroupsDeleteGridHelper.cs" />
+    <Compile Include="ATG\GridHelper\GroupsGridHelper.cs" />
+    <Compile Include="ATG\GridHelper\ProgramStaffGridHelper.cs" />
+    <Compile Include="ATG\GridHelper\EducationGridHelper.cs" />
+    <Compile Include="ATG\GridHelper\EmploymentGridHelper.cs" />
+    <Compile Include="ATG\GridHelper\PersonnelGridHelper.cs" />
+    <Compile Include="ATG\Security\User.cs" />
+    <Compile Include="ATG\Security\UserGroup.cs" />
+    <Compile Include="AppControl\ApplicationPrint.ascx.cs">
+      <DependentUpon>ApplicationPrint.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\ApplicationPrint.ascx.designer.cs">
+      <DependentUpon>ApplicationPrint.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\Drivers.ascx.cs">
+      <DependentUpon>Drivers.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\Drivers.ascx.designer.cs">
+      <DependentUpon>Drivers.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\DriversForm.ascx.cs">
+      <DependentUpon>DriversForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\DriversForm.ascx.designer.cs">
+      <DependentUpon>DriversForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\FacilityBilling.ascx.cs">
+      <DependentUpon>FacilityBilling.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\FacilityBilling.ascx.designer.cs">
+      <DependentUpon>FacilityBilling.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\FacilityTypeOf.ascx.cs">
+      <DependentUpon>FacilityTypeOf.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\FacilityTypeOf.ascx.designer.cs">
+      <DependentUpon>FacilityTypeOf.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\AffiliationOffsite.ascx.cs">
+      <DependentUpon>AffiliationOffsite.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\AffiliationOffsite.ascx.designer.cs">
+      <DependentUpon>AffiliationOffsite.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\AffiliationOffsiteEditForm.ascx.cs">
+      <DependentUpon>AffiliationOffsiteEditForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\AffiliationOffsiteEditForm.ascx.designer.cs">
+      <DependentUpon>AffiliationOffsiteEditForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\AplctnProvider.ascx.cs">
+      <DependentUpon>AplctnProvider.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\AplctnProvider.ascx.designer.cs">
+      <DependentUpon>AplctnProvider.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\AppAttachment.ascx.cs">
+      <DependentUpon>AppAttachment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\AppAttachment.ascx.designer.cs">
+      <DependentUpon>AppAttachment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\ApplicationItems.ascx.cs">
+      <DependentUpon>ApplicationItems.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\ApplicationItems.ascx.designer.cs">
+      <DependentUpon>ApplicationItems.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\BedDetails.ascx.cs">
+      <DependentUpon>BedDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\BedDetails.ascx.designer.cs">
+      <DependentUpon>BedDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\BedRecEditForm.ascx.cs">
+      <DependentUpon>BedRecEditForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\BedRecEditForm.ascx.designer.cs">
+      <DependentUpon>BedRecEditForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\BillingHistory.ascx.cs">
+      <DependentUpon>BillingHistory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\BillingHistory.ascx.designer.cs">
+      <DependentUpon>BillingHistory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\BillingInsertForm.ascx.cs">
+      <DependentUpon>BillingInsertForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\BillingInsertForm.ascx.designer.cs">
+      <DependentUpon>BillingInsertForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\EducationEditForm.ascx.cs">
+      <DependentUpon>EducationEditForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\EducationEditForm.ascx.designer.cs">
+      <DependentUpon>EducationEditForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\EmploymentEditForm.ascx.cs">
+      <DependentUpon>EmploymentEditForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\EmploymentEditForm.ascx.designer.cs">
+      <DependentUpon>EmploymentEditForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\Facility.ascx.cs">
+      <DependentUpon>Facility.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\Facility.ascx.designer.cs">
+      <DependentUpon>Facility.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\FacilityApplications.ascx.cs">
+      <DependentUpon>FacilityApplications.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\FacilityApplications.ascx.designer.cs">
+      <DependentUpon>FacilityApplications.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\FacilityAS400Comments.ascx.cs">
+      <DependentUpon>FacilityAS400Comments.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\FacilityAS400Comments.ascx.designer.cs">
+      <DependentUpon>FacilityAS400Comments.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\FacilityBeds.ascx.cs">
+      <DependentUpon>FacilityBeds.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\FacilityBeds.ascx.designer.cs">
+      <DependentUpon>FacilityBeds.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\FacilityDates.ascx.cs">
+      <DependentUpon>FacilityDates.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\FacilityDates.ascx.designer.cs">
+      <DependentUpon>FacilityDates.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\FacilityDetails.ascx.cs">
+      <DependentUpon>FacilityDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\FacilityDetails.ascx.designer.cs">
+      <DependentUpon>FacilityDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\FacilityGrid.ascx.cs">
+      <DependentUpon>FacilityGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\FacilityGrid.ascx.designer.cs">
+      <DependentUpon>FacilityGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\FacilityKeyPersonnel.ascx.cs">
+      <DependentUpon>FacilityKeyPersonnel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\FacilityKeyPersonnel.ascx.designer.cs">
+      <DependentUpon>FacilityKeyPersonnel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\FacilityOffiste.ascx.cs">
+      <DependentUpon>FacilityOffiste.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\FacilityOffiste.ascx.designer.cs">
+      <DependentUpon>FacilityOffiste.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\FacilityOperatingDetails.ascx.cs">
+      <DependentUpon>FacilityOperatingDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\FacilityOperatingDetails.ascx.designer.cs">
+      <DependentUpon>FacilityOperatingDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\FacilityOwnership.ascx.cs">
+      <DependentUpon>FacilityOwnership.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\FacilityOwnership.ascx.designer.cs">
+      <DependentUpon>FacilityOwnership.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\FacilityPayments.ascx.cs">
+      <DependentUpon>FacilityPayments.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\FacilityPayments.ascx.designer.cs">
+      <DependentUpon>FacilityPayments.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\FacilitySpecialtyUnit.ascx.cs">
+      <DependentUpon>FacilitySpecialtyUnit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\FacilitySpecialtyUnit.ascx.designer.cs">
+      <DependentUpon>FacilitySpecialtyUnit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\FacilitySummary.ascx.cs">
+      <DependentUpon>FacilitySummary.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\FacilitySummary.ascx.designer.cs">
+      <DependentUpon>FacilitySummary.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\GenericATGGrid.ascx.cs">
+      <DependentUpon>GenericATGGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\GenericATGGrid.ascx.designer.cs">
+      <DependentUpon>GenericATGGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\GenericCapSumm.ascx.cs">
+      <DependentUpon>GenericCapSumm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\GenericCapSumm.ascx.designer.cs">
+      <DependentUpon>GenericCapSumm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\HO_BedSummary.ascx.cs">
+      <DependentUpon>HO_BedSummary.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\HO_BedSummary.ascx.designer.cs">
+      <DependentUpon>HO_BedSummary.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\InsuranceCoverages.ascx.cs">
+      <DependentUpon>InsuranceCoverages.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\InsuranceCoverages.ascx.designer.cs">
+      <DependentUpon>InsuranceCoverages.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\InsuranceCoveragesForm.ascx.cs">
+      <DependentUpon>InsuranceCoveragesForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\InsuranceCoveragesForm.ascx.designer.cs">
+      <DependentUpon>InsuranceCoveragesForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\LetterOfIntentControl.ascx.cs">
+      <DependentUpon>LetterOfIntentControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\LetterOfIntentControl.ascx.designer.cs">
+      <DependentUpon>LetterOfIntentControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\LetterQueue.ascx.cs">
+      <DependentUpon>LetterQueue.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\LetterQueue.ascx.designer.cs">
+      <DependentUpon>LetterQueue.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\LettersReportViewer.ascx.cs">
+      <DependentUpon>LettersReportViewer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\LettersReportViewer.ascx.designer.cs">
+      <DependentUpon>LettersReportViewer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\LicActivityEditForm.ascx.cs">
+      <DependentUpon>LicActivityEditForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\LicActivityEditForm.ascx.designer.cs">
+      <DependentUpon>LicActivityEditForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\License.ascx.cs">
+      <DependentUpon>License.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\License.ascx.designer.cs">
+      <DependentUpon>License.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\ListLetterOfIntentControl.ascx.cs">
+      <DependentUpon>ListLetterOfIntentControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\ListLetterOfIntentControl.ascx.designer.cs">
+      <DependentUpon>ListLetterOfIntentControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\ListLicenceLetter.ascx.cs">
+      <DependentUpon>ListLicenceLetter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\ListLicenceLetter.ascx.designer.cs">
+      <DependentUpon>ListLicenceLetter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\LOICertOnlyControl.ascx.cs">
+      <DependentUpon>LOICertOnlyControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\LOICertOnlyControl.ascx.designer.cs">
+      <DependentUpon>LOICertOnlyControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\LOIMatchFormControl.ascx.cs">
+      <DependentUpon>LOIMatchFormControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\LOIMatchFormControl.ascx.designer.cs">
+      <DependentUpon>LOIMatchFormControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\LOIOffsiteAddition.ascx.cs">
+      <DependentUpon>LOIOffsiteAddition.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\LOIOffsiteAddition.ascx.designer.cs">
+      <DependentUpon>LOIOffsiteAddition.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\MessageCenter.ascx.cs">
+      <DependentUpon>MessageCenter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\MessageCenter.ascx.designer.cs">
+      <DependentUpon>MessageCenter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\OwnerEditForm.ascx.cs">
+      <DependentUpon>OwnerEditForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\OwnerEditForm.ascx.designer.cs">
+      <DependentUpon>OwnerEditForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\Ownership.ascx.cs">
+      <DependentUpon>Ownership.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\Ownership.ascx.designer.cs">
+      <DependentUpon>Ownership.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\OwnFacOtherEditForm.ascx.cs">
+      <DependentUpon>OwnFacOtherEditForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\OwnFacOtherEditForm.ascx.designer.cs">
+      <DependentUpon>OwnFacOtherEditForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\ParishesSubstations.ascx.cs">
+      <DependentUpon>ParishesSubstations.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\ParishesSubstations.ascx.designer.cs">
+      <DependentUpon>ParishesSubstations.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\PaymentAuthorization.ascx.cs">
+      <DependentUpon>PaymentAuthorization.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\PaymentAuthorization.ascx.designer.cs">
+      <DependentUpon>PaymentAuthorization.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\ProgramOperatingInfo.ascx.cs">
+      <DependentUpon>ProgramOperatingInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\ProgramOperatingInfo.ascx.designer.cs">
+      <DependentUpon>ProgramOperatingInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\ReportParameters.ascx.cs">
+      <DependentUpon>ReportParameters.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\ReportParameters.ascx.designer.cs">
+      <DependentUpon>ReportParameters.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\RequestForAccessControl.ascx.cs">
+      <DependentUpon>RequestForAccessControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\RequestForAccessControl.ascx.designer.cs">
+      <DependentUpon>RequestForAccessControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\Services.ascx.cs">
+      <DependentUpon>Services.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\Services.ascx.designer.cs">
+      <DependentUpon>Services.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\SpecialtyUnit.ascx.cs">
+      <DependentUpon>SpecialtyUnit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\SpecialtyUnit.ascx.designer.cs">
+      <DependentUpon>SpecialtyUnit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\ParishesSubstationsForm.ascx.cs">
+      <DependentUpon>ParishesSubstationsForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\ParishesSubstationsForm.ascx.designer.cs">
+      <DependentUpon>ParishesSubstationsForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\Vehicles.ascx.cs">
+      <DependentUpon>Vehicles.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\Vehicles.ascx.designer.cs">
+      <DependentUpon>Vehicles.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppControl\VehiclesForm.ascx.cs">
+      <DependentUpon>VehiclesForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppControl\VehiclesForm.ascx.designer.cs">
+      <DependentUpon>VehiclesForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ATG\BusinessObject\BO_Action.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ActionBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ActionPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Actions.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Address.cs" />
+    <Compile Include="ATG\BusinessObject\BO_AddressBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Addresses.cs" />
+    <Compile Include="ATG\BusinessObject\BO_AddressPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Affiliation.cs" />
+    <Compile Include="ATG\BusinessObject\BO_AffiliationBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_AffiliationPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Affiliations.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Application.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ApplicationBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ApplicationItem.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ApplicationItemAction.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ApplicationItemActionBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ApplicationItemActionPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ApplicationItemActions.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ApplicationItemBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ApplicationItemPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ApplicationItems.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ApplicationPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Applications.cs" />
+    <Compile Include="ATG\BusinessObject\BO_AppSetup.cs" />
+    <Compile Include="ATG\BusinessObject\BO_AppSetupBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_AppSetupPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_AppSetups.cs" />
+    <Compile Include="ATG\BusinessObject\BO_AuditLog.cs" />
+    <Compile Include="ATG\BusinessObject\BO_AuditLogBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_AuditLogPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_AuditLogs.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BatchProcess.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BatchProcessBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BatchProcesses.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BatchProcessPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Billing.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BillingBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BillingDetail.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BillingDetailBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BillingDetailPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BillingDetails.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BillingPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Billings.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BsnsObjct.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BsnsObjctBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BsnsObjctDtl.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BsnsObjctDtlBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BsnsObjctDtlPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BsnsObjctDtls.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BsnsObjctPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BsnsObjcts.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BsnsrlDfntn.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BsnsrlDfntnBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BsnsrlDfntnPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BsnsrlDfntns.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BsnsrlLvl.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BsnsrlLvlBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BsnsrlLvlPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BsnsrlLvls.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BsnsrlMstr.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BsnsrlMstrBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BsnsrlMstrPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BsnsrlMstrs.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BsnsrlQries.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BsnsrlQry.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BsnsrlQryBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BsnsrlQryPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BsnsrlRslt.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BsnsrlRsltBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BsnsrlRsltPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BsnsrlRslts.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BusinessProcesse.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BusinessProcesseBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BusinessProcessePrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_BusinessProcesses.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Capacities.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Capacity.cs" />
+    <Compile Include="ATG\BusinessObject\BO_CapacityBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_CapacityPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ChecklistItem.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ChecklistItemBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ChecklistItemPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ChecklistItems.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ChecklistItemValidAction.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ChecklistItemValidActionBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ChecklistItemValidActionPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ChecklistItemValidActions.cs" />
+    <Compile Include="ATG\BusinessObject\BO_CheckLogView.cs" />
+    <Compile Include="ATG\BusinessObject\BO_CheckLogViewBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_CheckLogViews.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Comment.cs" />
+    <Compile Include="ATG\BusinessObject\BO_CommentBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_CommentPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Comments.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Counties.cs" />
+    <Compile Include="ATG\BusinessObject\BO_County.cs" />
+    <Compile Include="ATG\BusinessObject\BO_CountyBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_CountyPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Education.cs" />
+    <Compile Include="ATG\BusinessObject\BO_EducationBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_EducationPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Educations.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Employment.cs" />
+    <Compile Include="ATG\BusinessObject\BO_EmploymentBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_EmploymentPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Employments.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ErrorLog.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ErrorLogBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ErrorLogs.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ErrorMessageLookup.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ErrorMessageLookupBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ErrorMessageLookups.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Fee.cs" />
+    <Compile Include="ATG\BusinessObject\BO_FeeBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_FeeModel.cs" />
+    <Compile Include="ATG\BusinessObject\BO_FeeModelBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_FeeModelPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_FeeModels.cs" />
+    <Compile Include="ATG\BusinessObject\BO_FeePrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Fees.cs" />
+    <Compile Include="ATG\BusinessObject\BO_FileAttach.cs" />
+    <Compile Include="ATG\BusinessObject\BO_FileAttachBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_FileAttaches.cs" />
+    <Compile Include="ATG\BusinessObject\BO_FileAttachPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ImplTyp.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ImplTypBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ImplTypPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ImplTyps.cs" />
+    <Compile Include="ATG\BusinessObject\BO_InsuranceCarrier.cs" />
+    <Compile Include="ATG\BusinessObject\BO_InsuranceCarrierBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_InsuranceCarrierPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_InsuranceCarriers.cs" />
+    <Compile Include="ATG\BusinessObject\BO_InsuranceCoverage.cs" />
+    <Compile Include="ATG\BusinessObject\BO_InsuranceCoverageBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_InsuranceCoveragePrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_InsuranceCoverages.cs" />
+    <Compile Include="ATG\BusinessObject\BO_LegalEntities.cs" />
+    <Compile Include="ATG\BusinessObject\BO_LegalEntity.cs" />
+    <Compile Include="ATG\BusinessObject\BO_LegalEntityBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_LegalEntityPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Letter.cs" />
+    <Compile Include="ATG\BusinessObject\BO_LetterBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_LetterOfIntent.cs" />
+    <Compile Include="ATG\BusinessObject\BO_LetterOfIntentBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_LetterOfIntentPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_LetterOfIntents.cs" />
+    <Compile Include="ATG\BusinessObject\BO_LetterPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Letters.cs" />
+    <Compile Include="ATG\BusinessObject\BO_LettersParameter.cs" />
+    <Compile Include="ATG\BusinessObject\BO_LettersParameterBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_LettersParameterPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_LettersParameters.cs" />
+    <Compile Include="ATG\BusinessObject\BO_LettersQueue.cs" />
+    <Compile Include="ATG\BusinessObject\BO_LettersQueueBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_LettersQueuePrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_LettersQueues.cs" />
+    <Compile Include="ATG\BusinessObject\BO_License.cs" />
+    <Compile Include="ATG\BusinessObject\BO_LicenseBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_LicensePrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Licenses.cs" />
+    <Compile Include="ATG\BusinessObject\BO_LookupValue.cs" />
+    <Compile Include="ATG\BusinessObject\BO_LookupValueBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_LookupValues.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Message.cs" />
+    <Compile Include="ATG\BusinessObject\BO_MessageBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_MessagePrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Messages.cs" />
+    <Compile Include="ATG\BusinessObject\BO_MessageTemplate.cs" />
+    <Compile Include="ATG\BusinessObject\BO_MessageTemplateBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_MessageTemplatePrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_MessageTemplates.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ObjctTyp.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ObjctTypBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ObjctTypPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ObjctTyps.cs" />
+    <Compile Include="ATG\BusinessObject\BO_OprtrTyp.cs" />
+    <Compile Include="ATG\BusinessObject\BO_OprtrTypBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_OprtrTypPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_OprtrTyps.cs" />
+    <Compile Include="ATG\BusinessObject\BO_OwnerOtherProvider.cs" />
+    <Compile Include="ATG\BusinessObject\BO_OwnerOtherProviderBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_OwnerOtherProviderPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_OwnerOtherProviders.cs" />
+    <Compile Include="ATG\BusinessObject\BO_OwnerPeople.cs" />
+    <Compile Include="ATG\BusinessObject\BO_OwnerPerson.cs" />
+    <Compile Include="ATG\BusinessObject\BO_OwnerPersonBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_OwnerPersonPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Ownership.cs" />
+    <Compile Include="ATG\BusinessObject\BO_OwnershipBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_OwnershipPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Ownerships.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Parishe.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ParisheBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ParishePrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Parishes.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ParishServed.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ParishServedBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ParishServedPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ParishServeds.cs" />
+    <Compile Include="ATG\BusinessObject\BO_People.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Person.cs" />
+    <Compile Include="ATG\BusinessObject\BO_PersonBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_PersonPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Program.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ProgramBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ProgramBusinessProcesse.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ProgramBusinessProcesseBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ProgramBusinessProcessePrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ProgramBusinessProcesses.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ProgramPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Programs.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ProgramStaff.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ProgramStaffBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ProgramStaffPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ProgramStaffs.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Provider.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ProviderBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ProviderLogin.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ProviderLoginBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ProviderLoginPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ProviderLogins.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ProviderPeople.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ProviderPerson.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ProviderPersonBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ProviderPersonPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ProviderPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Providers.cs" />
+    <Compile Include="ATG\BusinessObject\BO_QryGrp.cs" />
+    <Compile Include="ATG\BusinessObject\BO_QryGrpBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_QryGrpPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_QryGrps.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Region.cs" />
+    <Compile Include="ATG\BusinessObject\BO_RegionBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_RegionPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Regions.cs" />
+    <Compile Include="ATG\BusinessObject\BO_RL.cs" />
+    <Compile Include="ATG\BusinessObject\BO_RLBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_RlOprtr.cs" />
+    <Compile Include="ATG\BusinessObject\BO_RlOprtrBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_RlOprtrPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_RlOprtrs.cs" />
+    <Compile Include="ATG\BusinessObject\BO_RLPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_RLs.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Service.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ServiceBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ServicePrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Services.cs" />
+    <Compile Include="ATG\BusinessObject\BO_SpecialtyUnit.cs" />
+    <Compile Include="ATG\BusinessObject\BO_SpecialtyUnitBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_SpecialtyUnitPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_SpecialtyUnits.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Staffing.cs" />
+    <Compile Include="ATG\BusinessObject\BO_StaffingBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_StaffingPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Staffings.cs" />
+    <Compile Include="ATG\BusinessObject\BO_State.cs" />
+    <Compile Include="ATG\BusinessObject\BO_StateBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_StatePrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_States.cs" />
+    <Compile Include="ATG\BusinessObject\BO_StatusHistories.cs" />
+    <Compile Include="ATG\BusinessObject\BO_StatusHistory.cs" />
+    <Compile Include="ATG\BusinessObject\BO_StatusHistoryBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_StatusHistoryPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Substation.cs" />
+    <Compile Include="ATG\BusinessObject\BO_SubstationBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_SubstationPrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Substations.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Vehicle.cs" />
+    <Compile Include="ATG\BusinessObject\BO_VehicleBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_VehiclePrimaryKey.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Vehicles.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Ziplookup.cs" />
+    <Compile Include="ATG\BusinessObject\BO_ZiplookupBase.cs" />
+    <Compile Include="ATG\BusinessObject\BO_Ziplookups.cs" />
+    <Compile Include="ATG\BusinessRule\RuleEngine.cs" />
+    <Compile Include="ATG\BusinessRule\RuleSet.cs" />
+    <Compile Include="ATG\CommonFunc.cs" />
+    <Compile Include="ATG\Database\AtgDatabase.cs" />
+    <Compile Include="ATG\Database\DatabaseHelper.cs" />
+    <Compile Include="ATG\ErrorLogging\GenericException.cs" />
+    <Compile Include="ATG\GenericSorter.cs" />
+    <Compile Include="ATG\GridHelper\AccountingGridHelper.cs" />
+    <Compile Include="ATG\GridHelper\DriverGridHelper.cs" />
+    <Compile Include="ATG\GridHelper\FacilityGridHelper.cs" />
+    <Compile Include="ATG\GridHelper\InsuranceCoverageGridHelper.cs" />
+    <Compile Include="ATG\GridHelper\LetterGridHelper.cs" />
+    <Compile Include="ATG\GridHelper\LOIGridHelper.cs" />
+    <Compile Include="ATG\GridHelper\MessageGridHelper.cs" />
+    <Compile Include="ATG\GridHelper\QueueGridHelper.cs" />
+    <Compile Include="ATG\GridHelper\ParishesSubstationsGridHelper.cs" />
+    <Compile Include="ATG\GridHelper\VehiclesGridHelper.cs" />
+    <Compile Include="ATG\Interface\StateConfig.cs" />
+    <Compile Include="ATG\Security\UserGroups.cs" />
+    <Compile Include="ATG\Utilities\CreditCard\CreditCardValidation.cs" />
+    <Compile Include="ATG\Utilities\Crypto\Crypto.cs" />
+    <Compile Include="ATG\Utilities\Data\FileUpload.cs" />
+    <Compile Include="ATG\Utilities\Data\GridHelper.cs" />
+    <Compile Include="ATG\Utilities\PasswordGenerator.cs" />
+    <Compile Include="ATG\Utilities\Presentation\Tables\TableHelper.cs" />
+    <Compile Include="ATG\Utilities\Presentation\UI\ClientMessage.cs" />
+    <Compile Include="ATG\Utilities\RTF\RTFUtil.cs" />
+    <Compile Include="Common\DocHome.aspx.cs">
+      <DependentUpon>DocHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\DocHome.aspx.designer.cs">
+      <DependentUpon>DocHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\DocPrint.aspx.cs">
+      <DependentUpon>DocPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\DocPrint.aspx.designer.cs">
+      <DependentUpon>DocPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\EditForm\AffiliationForm.aspx.cs">
+      <DependentUpon>AffiliationForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\EditForm\AffiliationForm.aspx.designer.cs">
+      <DependentUpon>AffiliationForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\EditForm\AspenComments.aspx.cs">
+      <DependentUpon>AspenComments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\EditForm\AspenComments.aspx.designer.cs">
+      <DependentUpon>AspenComments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\EditForm\BatchPIVForm.aspx.cs">
+      <DependentUpon>BatchPIVForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\EditForm\BatchPIVForm.aspx.designer.cs">
+      <DependentUpon>BatchPIVForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\EditForm\CapacityForm.aspx.cs">
+      <DependentUpon>CapacityForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\EditForm\CapacityForm.aspx.designer.cs">
+      <DependentUpon>CapacityForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\EditForm\CheckLogForm.aspx.cs">
+      <DependentUpon>CheckLogForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\EditForm\CheckLogForm.aspx.designer.cs">
+      <DependentUpon>CheckLogForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\EditForm\ProgramStaffForm.aspx.cs">
+      <DependentUpon>ProgramStaffForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\EditForm\ProgramStaffForm.aspx.designer.cs">
+      <DependentUpon>ProgramStaffForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\EditForm\DriverForm.aspx.cs">
+      <DependentUpon>DriverForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\EditForm\DriverForm.aspx.designer.cs">
+      <DependentUpon>DriverForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\EditForm\EducationForm.aspx.cs">
+      <DependentUpon>EducationForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\EditForm\EducationForm.aspx.designer.cs">
+      <DependentUpon>EducationForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\EditForm\EmploymentForm.aspx.cs">
+      <DependentUpon>EmploymentForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\EditForm\EmploymentForm.aspx.designer.cs">
+      <DependentUpon>EmploymentForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\EditForm\InsuranceCoverageForm.aspx.cs">
+      <DependentUpon>InsuranceCoverageForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\EditForm\InsuranceCoverageForm.aspx.designer.cs">
+      <DependentUpon>InsuranceCoverageForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\EditForm\ParishesSubstationsForm.aspx.cs">
+      <DependentUpon>ParishesSubstationsForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\EditForm\ParishesSubstationsForm.aspx.designer.cs">
+      <DependentUpon>ParishesSubstationsForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\EditForm\PersonnelForm.aspx.cs">
+      <DependentUpon>PersonnelForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\EditForm\PersonnelForm.aspx.designer.cs">
+      <DependentUpon>PersonnelForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\EditForm\VehicleForm.aspx.cs">
+      <DependentUpon>VehicleForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\EditForm\VehicleForm.aspx.designer.cs">
+      <DependentUpon>VehicleForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\FileUpload.aspx.cs">
+      <DependentUpon>FileUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\FileUpload.aspx.designer.cs">
+      <DependentUpon>FileUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\FileViewer.aspx.cs">
+      <DependentUpon>FileViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\FileViewer.aspx.designer.cs">
+      <DependentUpon>FileViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\LettersReportViewerPage.aspx.cs">
+      <DependentUpon>LettersReportViewerPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\LettersReportViewerPage.aspx.designer.cs">
+      <DependentUpon>LettersReportViewerPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\LinkPayment.aspx.cs">
+      <DependentUpon>LinkPayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\LinkPayment.aspx.designer.cs">
+      <DependentUpon>LinkPayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\report.aspx.cs">
+      <DependentUpon>report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\report.aspx.designer.cs">
+      <DependentUpon>report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DHH\ApplicationPrintQueue.aspx.cs">
+      <DependentUpon>ApplicationPrintQueue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DHH\ApplicationPrintQueue.aspx.designer.cs">
+      <DependentUpon>ApplicationPrintQueue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DHH\BillingHistoryPage.aspx.cs">
+      <DependentUpon>BillingHistoryPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DHH\BillingHistoryPage.aspx.designer.cs">
+      <DependentUpon>BillingHistoryPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DHH\LettersPrint.aspx.cs">
+      <DependentUpon>LettersPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DHH\LettersPrint.aspx.designer.cs">
+      <DependentUpon>LettersPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DHH\LoginLetterPrint.aspx.cs">
+      <DependentUpon>LoginLetterPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DHH\LoginLetterPrint.aspx.designer.cs">
+      <DependentUpon>LoginLetterPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DHH\MatchLOIPage.aspx.cs">
+      <DependentUpon>MatchLOIPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DHH\MatchLOIPage.aspx.designer.cs">
+      <DependentUpon>MatchLOIPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DHH\StateFacilityPage.aspx.cs">
+      <DependentUpon>StateFacilityPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DHH\StateFacilityPage.aspx.designer.cs">
+      <DependentUpon>StateFacilityPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DHH\StateHome.aspx.cs">
+      <DependentUpon>StateHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DHH\StateHome.aspx.designer.cs">
+      <DependentUpon>StateHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DHH\StateLicensePage.aspx.cs">
+      <DependentUpon>StateLicensePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DHH\StateLicensePage.aspx.designer.cs">
+      <DependentUpon>StateLicensePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DHH\StateReportsPrint.aspx.cs">
+      <DependentUpon>StateReportsPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DHH\StateReportsPrint.aspx.designer.cs">
+      <DependentUpon>StateReportsPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DHH\ViewEditLOIPage.aspx.cs">
+      <DependentUpon>ViewEditLOIPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DHH\ViewEditLOIPage.aspx.designer.cs">
+      <DependentUpon>ViewEditLOIPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.designer.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="POPS.Master.cs">
+      <DependentUpon>POPS.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="POPS.Master.designer.cs">
+      <DependentUpon>POPS.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SessionMonitor.aspx.cs">
+      <DependentUpon>SessionMonitor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SessionMonitor.aspx.designer.cs">
+      <DependentUpon>SessionMonitor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="State.Master.cs">
+      <DependentUpon>State.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="State.Master.designer.cs">
+      <DependentUpon>State.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AppControl\ApplicationPrint.ascx" />
+    <Content Include="AppControl\Drivers.ascx" />
+    <Content Include="AppControl\DriversForm.ascx" />
+    <Content Include="AppControl\FacilityBilling.ascx" />
+    <Content Include="AppControl\FacilityTypeOf.ascx" />
+    <Content Include="AppControl\BillingHistory.ascx" />
+    <Content Include="AppControl\BillingInsertForm.ascx" />
+    <Content Include="AppControl\FacilityGrid.ascx" />
+    <Content Include="AppControl\GenericCapSumm.ascx" />
+    <Content Include="AppControl\HO_BedSummary.ascx" />
+    <Content Include="AppControl\InsuranceCoverages.ascx" />
+    <Content Include="AppControl\InsuranceCoveragesForm.ascx" />
+    <Content Include="AppControl\LetterQueue.ascx" />
+    <Content Include="AppControl\LettersReportViewer.ascx" />
+    <Content Include="AppControl\LOICertOnlyControl.ascx" />
+    <Content Include="AppControl\LOIOffsiteAddition.ascx" />
+    <Content Include="AppControl\ParishesSubstations.ascx" />
+    <Content Include="AppControl\PaymentAuthorization.ascx" />
+    <Content Include="AppControl\Personnel.ascx" />
+    <Content Include="AppControl\PersonnelForm.ascx" />
+    <Content Include="AppControl\ProgramOperatingInfo.ascx" />
+    <Content Include="AppControl\ParishesSubstationsForm.ascx" />
+    <Content Include="AppControl\Vehicles.ascx" />
+    <Content Include="AppControl\VehiclesForm.ascx" />
+    <Content Include="App_Themes\Office2007\Default.skin" />
+    <Content Include="App_Themes\Web20\Default.skin" />
+    <Content Include="Common\EditForm\BatchPIVForm.aspx" />
+    <Content Include="Common\EditForm\CapacityForm.aspx" />
+    <Content Include="Common\EditForm\CheckLogForm.aspx" />
+    <Content Include="Common\EditForm\DriverForm.aspx" />
+    <Content Include="Common\EditForm\EducationForm.aspx" />
+    <Content Include="Common\EditForm\EmploymentForm.aspx" />
+    <Content Include="Common\EditForm\InsuranceCoverageForm.aspx" />
+    <Content Include="Common\EditForm\ParishesSubstationsForm.aspx" />
+    <Content Include="Common\EditForm\PersonnelForm.aspx" />
+    <Content Include="Common\EditForm\VehicleForm.aspx" />
+    <Content Include="Common\LettersReportViewerPage.aspx" />
+    <Content Include="Common\LinkPayment.aspx" />
+    <Content Include="DHH\ApplicationPrintQueue.aspx" />
+    <Content Include="DHH\BillingHistoryPage.aspx" />
+    <Content Include="DHH\MatchLOIPage.aspx" />
+    <Content Include="DHH\StateFacilityPage.aspx" />
+    <Content Include="DHH\ViewEditLOIPage.aspx" />
+    <Content Include="ErrorPage.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="images\checkmarkyellow.png" />
+    <Content Include="images\database_add.png" />
+    <Content Include="images\DHH_LogoHrzntl.jpg" />
+    <Content Include="images\edit.png" />
+    <Content Include="images\Letterhead.jpg" />
+    <Content Include="images\link.gif" />
+    <Content Include="images\trash_full.png" />
+    <Content Include="images\view.png" />
+    <Content Include="images\x.png" />
+    <Content Include="Include\PrintScreenScript.js" />
+    <Content Include="Login.aspx" />
+    <None Include="images\HeadBack.psd" />
+    <None Include="images\HeadBack_State.psd" />
+    <None Include="images\LA_SEAL.psd" />
+    <None Include="images\LeftBack.psd" />
+    <None Include="images\LoginBack.psd" />
+    <Content Include="POPS.Master" />
+    <Content Include="SessionMonitor.aspx" />
+    <Content Include="State.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ATG\Admin\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>2292</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/POPS/State</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

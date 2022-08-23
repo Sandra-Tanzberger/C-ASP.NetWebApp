@@ -1,0 +1,81 @@
+.RadWindow_LAWeb20 .rwTopLeft,
+.RadWindow_LAWeb20 .rwTopRight,
+.RadWindow_LAWeb20 .rwTitlebar,
+.RadWindow_LAWeb20 .rwFooterLeft,
+.RadWindow_LAWeb20 .rwFooterRight,
+.RadWindow_LAWeb20 .rwFooterCenter,
+.RadWindow_LAWeb20 .rwTopResize,
+.RadWindow_LAWeb20 .rwStatusbar div,
+.RadWindow_LAWeb20 .rwStatusbar,
+.RadWindow_LAWeb20 .rwPopupButton,
+.RadWindow_LAWeb20 .rwPopupButton span,
+.RadWindow_LAWeb20.rwMinimizedWindow .rwCorner
+{
+    background-image: url('Window/WindowHorizontalSprites.gif');
+}
+
+.RadWindow_LAWeb20 .rwBodyLeft,
+.RadWindow_LAWeb20 .rwBodyRight,
+.RadWindow_LAWeb20 .rwStatusbarRow .rwCorner
+{
+	background-image: url('Window/WindowVerticalSprites.gif');
+}
+
+.RadWindow_LAWeb20 .rwStatusbar input
+{
+    background-color: #f7f3e9;
+}
+
+.RadWindow_LAWeb20 .rwControlButtons
+{
+    margin-top: 1px;
+}
+
+.RadWindow_LAWeb20 .rwControlButtons a
+{
+    background-image: url('Window/CommandButtonSprites.gif');
+}
+
+.RadWindow_LAWeb20 a.rwIcon
+{
+	background-image: url('Window/WindowHorizontalSprites.gif');
+}
+
+div.RadWindow_LAWeb20 .rwTitlebarControls em
+{
+	color: white;
+}
+
+div.RadWindow_LAWeb20 .rwDialogInput
+{
+	border: solid 1px #6788be;
+}
+
+div.RadWindow_LAWeb20 .rwDialogInput:hover
+{
+	border-color: #3f5f94;
+}
+
+div.RadWindow_LAWeb20 td.rwLoading
+{
+    background-color: #fff;
+}
+
+div.RadWindow_LAWeb20 td.rwWindowContent
+{
+    background-color: #fff;
+}
+
+/* Loading Indicators */
+
+/* When ShowContentDuringLoad="true" */
+div.RadWindow_LAWeb20 td.rwWindowContent.rwLoading
+{
+    background-image: url('Common/loading.gif');
+}
+
+/* When ShowContentDuringLoad="false" */
+div.RadWindow_LAWeb20 input.rwLoading
+{
+    background-image: url('Common/loading_small.gif');
+}

@@ -1,0 +1,434 @@
+/* <RadMenu / Web20> */
+
+.RadMenu_LAWeb20 .rmRootGroup,
+.RadMenu_LAWeb20 .rmLink,
+.RadMenu_LAWeb20 .rmText,
+.RadMenu_LAWeb20 .rmLeftArrow,
+.RadMenu_LAWeb20 .rmRightArrow,
+.RadMenu_LAWeb20 .rmTopArrow,
+.RadMenu_LAWeb20 .rmBottomArrow
+{
+	background-image: url('Menu/rmSprite.png');
+	background-color: transparent;
+}
+
+.RadMenu_LAWeb20 .rmRootGroup
+{
+	border: 1px solid #6788be;
+	background-color: #93b4df;
+}
+
+.RadMenu_LAWeb20 .rmHorizontal
+{
+	height: 24px;
+	background-repeat: repeat-x;
+	background-position: 0 0;
+}
+
+.RadMenu_LAWeb20 .rmVertical
+{
+	background-image: none;
+}
+
+/* <Root items> */
+
+.RadMenu_LAWeb20,
+.RadMenu_LAWeb20 .rmLink
+{
+	font: 10pt/20px Arial;
+	text-decoration: none;
+}
+
+.RadMenu_LAWeb20 .rmLink
+{
+	color: #fff;
+}
+
+.RadMenu_LAWeb20 .rmLink
+{
+	background-repeat: no-repeat;
+	background-position: 0px -24px;
+}
+
+.RadMenu_LAWeb20 .rmLink .rmText
+{
+	background-repeat: no-repeat;
+	background-position: -1px -48px;
+}
+
+.RadMenu_LAWeb20 .rmVertical .rmFirst,
+.RadMenu_LAWeb20 .rmVertical .rmLast
+{
+	background: none;
+}
+
+.RadMenu_LAWeb20 .rmLink:hover,
+.RadMenu_LAWeb20 .rmFocused,
+.RadMenu_LAWeb20 .rmSelected,
+.RadMenu_LAWeb20 .rmExpanded,
+.RadMenu_LAWeb20 .rmExpanded:hover
+{
+	font: 10pt/20px Arial;
+	color: #0f3789;
+	background-position: 0 -72px;
+}
+
+.RadMenu_LAWeb20 .rmFirst .rmLink:hover,
+.RadMenu_LAWeb20 .rmFirst .rmFocused,
+.RadMenu_LAWeb20 .rmFirst .rmSelected,
+.RadMenu_LAWeb20 .rmFirst .rmExpanded,
+.RadMenu_LAWeb20 .rmFirst .rmExpanded:hover
+{
+	background-position: -1px -72px;
+}
+
+.RadMenu_LAWeb20 .rmLink:hover .rmText,
+.RadMenu_LAWeb20 .rmFocused .rmText,
+.RadMenu_LAWeb20 .rmSelected .rmText,
+.RadMenu_LAWeb20 .rmExpanded .rmText,
+.RadMenu_LAWeb20 .rmExpanded:hover .rmText
+{
+	background-position: 100% -96px;
+}
+
+.RadMenu_LAWeb20 .rmLast .rmLink:hover .rmText,
+.RadMenu_LAWeb20 .rmLast .rmFocused .rmText,
+.RadMenu_LAWeb20 .rmLast .rmSelected .rmText,
+.RadMenu_LAWeb20 .rmLast .rmExpanded .rmText,
+.RadMenu_LAWeb20 .rmLast .rmExpanded:hover .rmText
+{
+	background-position: 0 -96px;
+}
+
+.RadMenu_LAWeb20 .rmItem .rmDisabled,
+.RadMenu_LAWeb20 .rmItem .rmDisabled:hover,
+.RadMenu_LAWeb20 .rmItem .rmDisabled .rmText,
+.RadMenu_LAWeb20 .rmItem .rmDisabled:hover .rmText
+{
+	background-repeat: no-repeat;
+	background-position: 0 500px;
+}
+
+.RadMenu_LAWeb20 .rmVertical .rmLink
+{
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+
+.RadMenu_LAWeb20 .rmVertical .rmLink:hover,
+.RadMenu_LAWeb20 .rmVertical .rmFocused,
+.RadMenu_LAWeb20 .rmVertical .rmSelected,
+.RadMenu_LAWeb20 .rmVertical .rmExpanded,
+.RadMenu_LAWeb20 .rmVertical .rmExpanded:hover
+{
+	padding-top: 0;
+	padding-bottom: 0;
+	border-style: solid;
+	border-color: #3f5f94;
+	border-width: 1px 0;
+}
+
+.RadMenu_LAWeb20 .rmVertical .rmLink:hover,
+.RadMenu_LAWeb20 .rmVertical .rmFocused,
+.RadMenu_LAWeb20 .rmVertical .rmSelected,
+.RadMenu_LAWeb20 .rmVertical .rmExpanded,
+.RadMenu_LAWeb20 .rmVertical .rmExpanded:hover,
+.RadMenu_LAWeb20 .rmVertical .rmLink:hover .rmText,
+.RadMenu_LAWeb20 .rmVertical .rmFocused .rmText,
+.RadMenu_LAWeb20 .rmVertical .rmSelected .rmText,
+.RadMenu_LAWeb20 .rmVertical .rmExpanded .rmText,
+.RadMenu_LAWeb20 .rmVertical .rmExpanded:hover .rmText
+{
+	background-position: -1px -72px;
+}
+
+.RadMenu_LAWeb20 .rmVertical .rmFirst .rmLink:hover,
+.RadMenu_LAWeb20 .rmVertical .rmFirst .rmFocused,
+.RadMenu_LAWeb20 .rmVertical .rmFirst .rmSelected,
+.RadMenu_LAWeb20 .rmVertical .rmFirst .rmExpanded,
+.RadMenu_LAWeb20 .rmVertical .rmFirst .rmExpanded:hover
+{
+	padding-top: 1px;
+	padding-bottom: 0;
+	border-top-width: 0;
+}
+
+.RadMenu_LAWeb20 .rmVertical .rmLast .rmLink:hover,
+.RadMenu_LAWeb20 .rmVertical .rmLast .rmFocused,
+.RadMenu_LAWeb20 .rmVertical .rmLast .rmSelected,
+.RadMenu_LAWeb20 .rmVertical .rmLast .rmExpanded,
+.RadMenu_LAWeb20 .rmVertical .rmLast .rmExpanded:hover
+{
+	padding-bottom: 1px;
+	padding-top: 0;
+	border-bottom-width: 0;
+}
+
+.RadMenu_LAWeb20 .rmVertical .rmItem .rmDisabled:hover
+{
+	padding-top: 1px;
+	padding-bottom: 1px;
+	border-width: 0;
+}
+
+.RadMenu_LAWeb20 .rmLast .rmExpanded .rmText
+{
+	background-position: 0 500px;
+	background-repeat: no-repeat;
+}
+
+.RadMenu_LAWeb20 .rmDisabled,
+.RadMenu_LAWeb20 .rmDisabled:hover
+{
+	color: #bdcae3;
+	background-color: transparent;
+}
+
+/* </Root items> */
+
+
+/* <Submenu items> */
+
+.RadMenu_LAWeb20 .rmGroup,
+.RadMenu_LAWeb20 .rmGroup .rmVertical
+{
+	border: 1px solid #979797;
+	background: #fff url('Menu/rmVSprite.png') repeat-y -1px 0;
+}
+
+.RadMenu_LAWeb20 .rmGroup .rmLink
+{
+	color: #FFFFFF;
+}
+
+.RadMenu_LAWeb20 .rmSlide .rmScrollWrap
+{
+	background-image: none;
+}
+
+.RadMenu_LAWeb20_rtl .rmGroup,
+.RadMenu_LAWeb20_rtl .rmGroup .rmVertical
+{
+	background-position: 101% 0;
+}
+
+.RadMenu_LAWeb20 .rmRootGroup .rmHorizontal
+{
+	background-image: none;
+}
+
+.RadMenu_LAWeb20 .rmScrollWrap .rmVertical
+{
+	border: 0;
+}
+
+.RadMenu_LAWeb20 .rmGroup .rmLink:hover,
+.RadMenu_LAWeb20 .rmGroup .rmItem .rmFocused,
+.RadMenu_LAWeb20 .rmGroup .rmItem .rmSelected,
+.RadMenu_LAWeb20 .rmGroup .rmItem .rmExpanded
+{
+	color: #0f3789;
+}
+
+.RadMenu_LAWeb20 .rmGroup .rmDisabled,
+.RadMenu_LAWeb20 .rmGroup .rmDisabled:hover
+{
+	color: #8a8a8a;
+}
+
+.RadMenu_LAWeb20 .rmGroup .rmItem .rmLink,
+.RadMenu_LAWeb20 .rmGroup .rmItem .rmLink:hover,
+.RadMenu_LAWeb20 .rmGroup .rmItem .rmFocused,
+.RadMenu_LAWeb20 .rmGroup .rmItem .rmSelected,
+.RadMenu_LAWeb20 .rmGroup .rmItem .rmExpanded
+{
+	padding-top: 0;
+	padding-bottom: 0;
+	border: 0;
+}
+
+.RadMenu_LAWeb20 .rmGroup .rmLink,
+.RadMenu_LAWeb20 .rmGroup .rmText,
+.RadMenu_LAWeb20 .rmGroup .rmItem .rmDisabled,
+.RadMenu_LAWeb20 .rmGroup .rmItem .rmDisabled:hover,
+.RadMenu_LAWeb20 .rmGroup .rmItem .rmDisabled .rmText,
+.RadMenu_LAWeb20 .rmGroup .rmItem .rmDisabled:hover .rmText
+{
+	background-position: 0 500px;
+	background-repeat: no-repeat;
+	background-color: transparent;
+}
+
+.RadMenu_LAWeb20 .rmGroup .rmLink:hover,
+.RadMenu_LAWeb20 .rmGroup .rmFocused,
+.RadMenu_LAWeb20 .rmGroup .rmSelected,
+.RadMenu_LAWeb20 .rmGroup .rmExpanded
+{
+	background-position: 0 -168px;
+}
+
+.RadMenu_LAWeb20 .rmGroup .rmLink:hover .rmText,
+.RadMenu_LAWeb20 .rmGroup .rmFocused .rmText,
+.RadMenu_LAWeb20 .rmGroup .rmSelected .rmText,
+.RadMenu_LAWeb20 .rmGroup .rmExpanded .rmText
+{
+	background-position: 100% -192px;
+}
+
+/* <expand arrows> */
+
+.RadMenu_LAWeb20 .rmGroup .rmExpandRight,
+.RadMenu_LAWeb20 .rmGroup .rmExpandDown,
+.RadMenu_LAWeb20 .rmGroup .rmItem .rmDisabled .rmExpandRight,
+.RadMenu_LAWeb20 .rmGroup .rmItem .rmDisabled .rmExpandDown,
+.RadMenu_LAWeb20 .rmGroup .rmItem .rmDisabled:hover .rmExpandRight,
+.RadMenu_LAWeb20 .rmGroup .rmItem .rmDisabled:hover .rmExpandDown
+{
+	background-position: 100% -216px;
+}
+
+.RadMenu_LAWeb20 .rmGroup .rmLink:hover .rmExpandRight,
+.RadMenu_LAWeb20 .rmGroup .rmFocused .rmExpandRight,
+.RadMenu_LAWeb20 .rmGroup .rmSelected .rmExpandRight,
+.RadMenu_LAWeb20 .rmGroup .rmExpanded .rmExpandRight,
+.RadMenu_LAWeb20 .rmGroup .rmLink:hover .rmExpandDown,
+.RadMenu_LAWeb20 .rmGroup .rmFocused .rmExpandDown,
+.RadMenu_LAWeb20 .rmGroup .rmSelected .rmExpandDown,
+.RadMenu_LAWeb20 .rmGroup .rmExpanded .rmExpandDown
+{
+	background-position: 100% -240px;
+}
+
+.RadMenu_LAWeb20 .rmGroup .rmDisabled:hover .rmExpandRight,
+.RadMenu_LAWeb20 .rmGroup .rmDisabled:hover .rmExpandDown
+{
+	background-image: url('Menu/rmSprite.png');
+	background-position: 100% -216px;
+}
+
+/* </expand arrows> */
+
+/* <rtl> */
+
+.RadMenu_LAWeb20_rtl .rmGroup .rmLink:hover,
+.RadMenu_LAWeb20_rtl .rmGroup .rmFocused,
+.RadMenu_LAWeb20_rtl .rmGroup .rmSelected,
+.RadMenu_LAWeb20_rtl .rmGroup .rmExpanded
+{
+	background-position: 100% -264px;
+}
+
+.RadMenu_LAWeb20_rtl .rmGroup .rmLink:hover .rmText,
+.RadMenu_LAWeb20_rtl .rmGroup .rmFocused .rmText,
+.RadMenu_LAWeb20_rtl .rmGroup .rmSelected .rmText,
+.RadMenu_LAWeb20_rtl .rmGroup .rmExpanded .rmText
+{
+	background-position: 0 -288px;
+}
+
+.RadMenu_LAWeb20_rtl .rmGroup .rmExpandLeft
+{
+	background-position: 0 -312px;
+}
+
+.RadMenu_LAWeb20_rtl .rmGroup .rmLink:hover .rmExpandLeft,
+.RadMenu_LAWeb20_rtl .rmGroup .rmFocused .rmExpandLeft,
+.RadMenu_LAWeb20_rtl .rmGroup .rmSelected .rmExpandLeft,
+.RadMenu_LAWeb20_rtl .rmGroup .rmExpanded .rmExpandLeft
+{
+	background-position: 0 -336px;
+}
+
+/* </rtl> */
+
+/* </Submenu items> */
+
+/* <Submenu offsets (Web20 - specific, overlapping submenus)> */
+
+.RadMenu_LAWeb20 .rmFirst .rmSlide
+{
+	margin: 0 0 0 -1px;
+}
+
+.RadMenu_LAWeb20 .rmVertical .rmSlide,
+.RadMenu_LAWeb20 .rmSlide .rmSlide,
+.RadMenu_LAWeb20_Context .rmGroup .rmSlide
+{
+	margin: 0 0 0 -5px;
+}
+
+.RadMenu_LAWeb20_rtl .rmSlide
+{
+	margin: 0 0 0 0;
+}
+
+.RadMenu_LAWeb20_rtl .rmFirst .rmSlide
+{
+	margin-left: 1px;
+}
+
+.RadMenu_LAWeb20_rtl .rmVertical .rmSlide,
+.RadMenu_LAWeb20_rtl .rmSlide .rmSlide,
+.RadMenu_LAWeb20_Context_rtl .rmGroup .rmSlide
+{
+	margin: 0 0 0 5px;
+}
+
+/* </Submenu offsets> */
+
+/* <Scrolling arrows> */
+
+.RadMenu_LAWeb20 .rmLeftArrow,
+.RadMenu_LAWeb20 .rmRightArrow
+{
+	background-color: #ECF4FF;
+}
+
+.RadMenu_LAWeb20 .rmLeftArrow { background-position: -8px -312px; border-right: 1px solid #828282; }
+.RadMenu_LAWeb20 .rmRightArrow { background-position: -482px -216px; border-left: 1px solid #828282; }
+
+.RadMenu_LAWeb20 .rmTopArrow,
+.RadMenu_LAWeb20 .rmBottomArrow,
+.RadMenu_LAWeb20 .rmGroup .rmLeftArrow,
+.RadMenu_LAWeb20 .rmGroup .rmRightArrow
+{
+	background-color: #ECF4FF;
+}
+
+.RadMenu_LAWeb20 .rmTopArrow { background-position: 50% -367px; border-bottom: 1px solid #828282; }
+.RadMenu_LAWeb20 .rmBottomArrow { background-position: 50% -391px; border-top: 1px solid #828282; }
+
+/* </Scrolling arrows> */
+
+/* <Separators> */
+
+.RadMenu_LAWeb20 .rmHorizontal .rmSeparator .rmText,
+.RadMenu_LAWeb20 .rmVertical .rmHorizontal .rmSeparator .rmText
+{
+	height: 22px;
+	margin: 1px 0 0;
+	width: 1px;
+}
+
+.RadMenu_LAWeb20_Context .rmSeparator .rmText,
+.RadMenu_LAWeb20 .rmHorizontal .rmGroup .rmSeparator .rmText,
+.RadMenu_LAWeb20 .rmVertical .rmHorizontal .rmGroup .rmSeparator .rmText
+{
+	background-color: transparent;
+	background-position: 0 -408px;
+}
+
+/* </Separators> */
+
+/* </RadMenu / Web20> */
+
+DIV.RadMenu_LAWeb20 .rmItem .rmLink
+{
+	border-right: 1px solid;
+	border-top: 1px solid;
+	border-left: 1px solid;
+	border-bottom: 1px solid;
+	border-color: #FFFFFF;
+	margin-left: 5px;
+	background-color: #8A69AB;
+}

@@ -1,0 +1,65 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="POPS.Master.cs" Inherits="POPS.POPS" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="HeadMaster" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="style/Master.css" rel="stylesheet" type="text/css" />
+    <link href="style/AtgWebUI.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="popUp"></div>
+<div id="msgLayer">
+    <div id="middle">
+        <div id="msgTitle">Information</div>
+        <div id="msgLbl"></div>
+        <br />
+        <button id="btnOK" onclick="changeToVisible('none');" runat="server" type="button" style="padding-right: 10px">Ok</button>
+    </div>
+</div>
+<div id="pgContent">
+    <form id="MainForm" runat="server">
+        <telerik:RadScriptManager ID="LicAppRSM" runat="server">
+            <Scripts>
+                <asp:ScriptReference Path="~/Include/Common.js" />
+                <asp:ScriptReference Path="~/Include/AtgWebUI.js" />
+            </Scripts>
+            <Services>  
+                <asp:ServiceReference Path="~/Service/PersistUI.asmx" />  
+            </Services>  
+        </telerik:RadScriptManager>
+        <telerik:RadAjaxManager ID="LicAppAJM" runat="server" />
+        <asp:HiddenField ID="hiddenSize" runat="server" Value="0" />
+         <telerik:RadStyleSheetManager ID="RadStyleSheetManager1" runat="server" >
+            <StyleSheets></StyleSheets>
+        </telerik:RadStyleSheetManager>
+        <div id="headerContentPOPS">
+        <iframe runat="server" id="KeepAliveFrame" src="../SessionMonitor.aspx" frameborder="0" width="0" height="0"></iframe>
+            <div id="stSeal"></div>
+
+            <div id="version" align="right" style="position: relative; top: 50%; right: 1%; transform: translateY(-100%);"><b>v 13.1</b>
+            </div>
+        </div>
+        <div id="menuContent">
+            <asp:ContentPlaceHolder ID="menu_Content" runat="server" />
+        </div>
+        <div id="mainContent">
+            <asp:ContentPlaceHolder ID="M_Content" runat="server" />
+        </div>
+        <div id="footerContent">
+            <asp:ContentPlaceHolder ID="F_Content" runat="server">
+                <table width="100%" border="0">
+                    <tr>
+                        <td align="left">© 2009 Louisiana Department of Health</td>
+                        <td align="right"><a href="#">Privacy Policy</a></td>
+                    </tr>
+                </table>            
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</div>
+</body>
+</html>

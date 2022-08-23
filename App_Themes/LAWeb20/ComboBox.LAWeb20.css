@@ -1,0 +1,439 @@
+/* RadComboBox Web20 skin */
+
+/*global*/
+
+.RadComboBox_LAWeb20 *
+{
+	margin: 0;
+	padding: 0;
+}
+
+.RadComboBox_LAWeb20,
+.RadComboBox_LAWeb20 .rcbInput,
+.RadComboBoxDropDown_LAWeb20
+{
+	font: 10pt Arial;
+	color: #000;
+	text-align: left;
+	margin-bottom: 3px;
+}
+
+.RadComboBox_LAWeb20_rtl,
+.RadComboBox_LAWeb20_rtl .rcbInput,
+.RadComboBoxDropDown_LAWeb20_rtl
+{
+	text-align: right;
+}
+
+/* combobox */
+
+.RadComboBox_LAWeb20
+{
+	vertical-align: middle;
+}
+
+* html .RadComboBox_LAWeb20 { vertical-align: top; 	z-index: 999 !important; }
+
+.RadComboBox_LAWeb20 table
+{
+	border: 0;
+	border-collapse: collapse;
+}
+
+.RadComboBox_LAWeb20 table td.rcbInputCell
+{
+	width: 100%;
+	height: 20px;
+	line-height: 20px;
+	vertical-align: middle;
+	padding: 0;
+	border: 0;
+}
+
+* html .RadComboBox_LAWeb20 td.rcbInputCell
+{
+	height /**/: 22px;
+	line-height /**/: 22px;
+}
+
+.RadComboBox_LAWeb20 .rcbInputCellLeft,
+.RadComboBox_LAWeb20 .rcbInputCellRight,
+.RadComboBox_LAWeb20 .rcbArrowCellLeft,
+.RadComboBox_LAWeb20 .rcbArrowCellRight
+{
+	background: url('ComboBox/rcbSprite.png') no-repeat;
+}
+
+.RadComboBox_LAWeb20 td.rcbInputCellLeft { background-position: 0 -110px; }
+.RadComboBox_LAWeb20 td.rcbInputCellRight { background-position: 100% -110px; }
+
+.RadComboBox_LAWeb20 .rcbHovered td.rcbInputCellLeft { background-position: 0 -132px; }
+.RadComboBox_LAWeb20 .rcbHovered td.rcbInputCellRight { background-position: 100% -132px; }
+
+.RadComboBox_LAWeb20 .rcbFocused td.rcbInputCellLeft { background-position: 0 -154px; }
+.RadComboBox_LAWeb20 .rcbFocused td.rcbInputCellRight { background-position: 100% -154px; }
+
+.RadComboBox_LAWeb20 .rcbDisabled td.rcbInputCellLeft { background-position: 0 -154px; }
+.RadComboBox_LAWeb20 .rcbDisabled td.rcbInputCellRight { background-position: 100% -154px; }
+
+.RadComboBox_LAWeb20 .rcbReadOnly .rcbInputCellLeft { background-position: 0 0; }
+.RadComboBox_LAWeb20 .rcbReadOnly .rcbInputCellRight { background-position: 100% 0; }
+
+.RadComboBox_LAWeb20 .rcbHovered .rcbReadOnly td.rcbInputCellLeft { background-position: 0 -22px; }
+.RadComboBox_LAWeb20 .rcbHovered .rcbReadOnly td.rcbInputCellRight { background-position: 100% -22px; }
+
+.RadComboBox_LAWeb20 .rcbFocused .rcbReadOnly td.rcbInputCellLeft { background-position: 0 -44px; }
+.RadComboBox_LAWeb20 .rcbFocused .rcbReadOnly td.rcbInputCellRight { background-position: 100% -44px; }
+
+.RadComboBox_LAWeb20 .rcbInputCell .rcbInput
+{
+	width: 100%;
+	background: transparent;
+	border: 0;
+	vertical-align: middle;
+	padding: 2px 0 1px;
+	outline: 0;
+}
+
+* html .RadComboBox_LAWeb20 .rcbInputCell .rcbInput
+{
+	height /**/: 18px;
+	padding /**/: 2px 0; /* This should fix the ajax introduced height in IE7 and not break IE6 */
+}
+
+.RadComboBox_LAWeb20 .rcbInputCell .rcbEmptyMessage
+{
+	color: #000000;
+	font-style: italic;
+}
+
+.RadComboBox_LAWeb20 .rcbReadOnly .rcbInput
+{
+	cursor: default;
+	color: #000;
+	/*font-weight: bold;*/
+}
+
+.RadComboBox_LAWeb20 table td.rcbInputCell,
+.RadComboBox_LAWeb20 .rcbInputCell .rcbInput
+{
+	padding-left: 2px;
+}
+
+.RadComboBox_LAWeb20_rtl table td.rcbInputCell,
+.RadComboBox_LAWeb20_rtl .rcbInputCell .rcbInput
+{
+	padding-right: 2px;
+	padding-left: 0;
+}
+
+.RadComboBox_LAWeb20 .rcbHovered .rcbInputCell .rcbInput,
+.RadComboBox_LAWeb20 .rcbFocused .rcbInputCell .rcbInput
+{
+	color: #000;
+}
+
+.RadComboBox_LAWeb20 table td.rcbArrowCell
+{
+	width: 18px;
+	padding: 0;
+	border: 0;
+}
+
+.RadComboBox_LAWeb20 td.rcbArrowCellLeft { background-position: -18px -88px; }
+.RadComboBox_LAWeb20 td.rcbArrowCellRight { background-position: 0 -88px; }
+
+.RadComboBox_LAWeb20 .rcbHovered .rcbArrowCellLeft { background-position: -54px -88px; }
+.RadComboBox_LAWeb20 .rcbHovered .rcbArrowCellRight { background-position: -36px -88px; }
+
+.RadComboBox_LAWeb20 .rcbFocused .rcbArrowCellLeft { background-position: -90px -88px; }
+.RadComboBox_LAWeb20 .rcbFocused .rcbArrowCellRight { background-position: -72px -88px; }
+
+.RadComboBox_LAWeb20 td.rcbArrowCellHidden { background-position: 100% -110px; }
+.RadComboBox_LAWeb20 .rcbHovered td.rcbArrowCellHidden { background-position: 100% -132px; }
+.RadComboBox_LAWeb20 .rcbFocused td.rcbArrowCellHidden { background-position: 100% -154px; }
+.RadComboBox_LAWeb20 table.rcbDisabled td.rcbArrowCellHidden { background-position: -123px -88px; }
+
+.RadComboBox_LAWeb20 .rcbHovered .rcbReadOnly td.rcbArrowCellHidden { background-position: -51px -88px; }
+.RadComboBox_LAWeb20 .rcbFocused .rcbReadOnly td.rcbArrowCellHidden { background-position: -87px -88px; }
+
+.RadComboBox_LAWeb20 .rcbArrowCell a
+{
+	position: relative;
+	outline: 0;
+	overflow: hidden;
+	display: block;
+	width: 18px;
+	height: 22px;
+	text-decoration: none;
+	text-indent: -9999px;
+	font-size: 1px;
+}
+
+.RadComboBox_LAWeb20 td.rcbArrowCellHidden,
+.RadComboBox_LAWeb20 .rcbArrowCellHidden a
+{
+	width: 3px;
+}
+
+/* Read-only styles */
+
+.RadComboBox_LAWeb20 .rcbReadOnly td.rcbArrowCell { width: 16px; }
+.RadComboBox_LAWeb20 .rcbReadOnly td.rcbArrowCell a { width: 16px; }
+
+.RadComboBox_LAWeb20 .rcbReadOnly td.rcbArrowCellLeft { background-position: -18px -88px; }
+.RadComboBox_LAWeb20 .rcbReadOnly td.rcbArrowCellRight { background-position: -2px -88px; }
+
+.RadComboBox_LAWeb20 .rcbHovered .rcbReadOnly .rcbArrowCellLeft { background-position: -54px -88px; }
+.RadComboBox_LAWeb20 .rcbHovered .rcbReadOnly .rcbArrowCellRight { background-position: -38px -88px; }
+
+.RadComboBox_LAWeb20 .rcbFocused .rcbReadOnly .rcbArrowCellLeft { background-position: -90px -88px; }
+.RadComboBox_LAWeb20 .rcbFocused .rcbReadOnly .rcbArrowCellRight { background-position: -74px -88px; }
+
+.RadComboBox_LAWeb20 .rcbReadOnly td.rcbArrowCellHidden,
+.RadComboBox_LAWeb20 .rcbReadOnly td.rcbArrowCellHidden a { width: 3px; } 
+.RadComboBox_LAWeb20 .rcbReadOnly td.rcbArrowCellHidden { background-position: -15px -88px; }
+.RadComboBox_LAWeb20 .rcbHovered .rcbReadOnly td.rcbArrowCellHidden { background-position: -51px -88px; }
+.RadComboBox_LAWeb20 .rcbFocused .rcbReadOnly td.rcbArrowCellHidden { background-position: -87px -88px; }
+
+/* dropdown */
+
+.rcbSlide
+{
+	position: absolute;
+	overflow: hidden;
+	display: none;
+	_height: 1px;
+	float: left;
+}
+
+.RadComboBoxDropDown_LAWeb20 .rcbMoreResults a
+{
+	background-image: url('ComboBox/rcbSprite.png');
+	background-repeat: no-repeat;
+}
+
+.RadComboBoxDropDown_LAWeb20
+{
+	position: absolute;
+	background: #fff;
+	border: 1px solid #6788be;
+	cursor: default;
+	font: 10pt Arial;
+	color: #000;
+}
+
+.RadComboBoxDropDown_LAWeb20_rtl
+{
+	text-align: right;
+	direction: rtl;
+}
+
+.RadComboBoxDropDown_LAWeb20 .rcbScroll
+{
+	overflow: auto;
+	position: relative;
+}
+
+.RadComboBoxDropDown_LAWeb20 .rcbList
+{
+	list-style: none outside;
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+.RadComboBoxDropDown_LAWeb20 .rcbHeader,
+.RadComboBoxDropDown_LAWeb20 .rcbFooter
+{
+	background-color: #ecf4ff;
+	padding: 5px 7px 4px;
+	color: #000;
+}
+
+.RadComboBoxDropDown_LAWeb20 .rcbHeader
+{
+	border-bottom: 1px solid #c7dcf9;
+	margin-bottom: 1px;
+}
+
+.RadComboBoxDropDown_LAWeb20 .rcbFooter
+{
+	border-top: 1px solid #c7dcf9;
+	margin-top: 1px;
+}
+
+.RadComboBoxDropDown_LAWeb20 .rcbNoWrap .rcbItem,
+.RadComboBoxDropDown_LAWeb20 .rcbNoWrap .rcbHovered,
+.RadComboBoxDropDown_LAWeb20 .rcbNoWrap .rcbDisabled,
+.RadComboBoxDropDown_LAWeb20 .rcbNoWrap .rcbLoading
+{
+	white-space: nowrap;
+}
+
+.RadComboBoxDropDown_LAWeb20 .rcbItem,
+.RadComboBoxDropDown_LAWeb20 .rcbHovered,
+.RadComboBoxDropDown_LAWeb20 .rcbDisabled,
+.RadComboBoxDropDown_LAWeb20 .rcbLoading
+{
+	padding: 2px 6px;
+	margin: 0 1px;
+}
+
+html>/**/body .RadComboBoxDropDown_LAWeb20 .rcbItem,
+html>/**/body .RadComboBoxDropDown_LAWeb20 .rcbHovered,
+html>/**/body .RadComboBoxDropDown_LAWeb20 .rcbDisabled,
+html>/**/body .RadComboBoxDropDown_LAWeb20 .rcbLoading
+{
+	min-height: 13px;
+}
+
+*+html .RadComboBoxDropDown_LAWeb20 .rcbItem,
+*+html .RadComboBoxDropDown_LAWeb20 .rcbHovered,
+*+html .RadComboBoxDropDown_LAWeb20 .rcbDisabled,
+*+html .RadComboBoxDropDown_LAWeb20 .rcbLoading
+{
+	height: auto;
+}
+
+.RadComboBoxDropDown_LAWeb20_rtl .rcbItem,
+.RadComboBoxDropDown_LAWeb20_rtl .rcbHovered,
+.RadComboBoxDropDown_LAWeb20_rtl .rcbDisabled,
+.RadComboBoxDropDown_LAWeb20_rtl .rcbLoading
+{
+	padding: 2px 6px;
+}
+
+.RadComboBoxDropDown_LAWeb20 .rcbImage
+{
+	vertical-align: middle;
+	margin: 0 6px 2px 0;
+}
+
+.RadComboBoxDropDown_LAWeb20_rtl .rcbImage
+{
+	margin: 0 0 2px 6px;
+}
+
+.RadComboBoxDropDown_LAWeb20 em
+{
+	font-style: normal;
+	font-weight: bold;
+}
+
+.RadComboBoxDropDown_LAWeb20 .rcbItem em
+{
+	background: #e5e5e5;
+}
+
+.RadComboBoxDropDown_LAWeb20 .rcbHovered
+{
+	padding: 1px 18px 1px 5px;
+	border: 1px solid #bcd2f1;
+	background: #e7f1ff;
+	color: #000;
+}
+
+.RadComboBoxDropDown_LAWeb20_rtl .rcbHovered
+{
+	padding: 1px 5px 1px 18px;
+}
+
+.RadComboBoxDropDown_LAWeb20 .rcbSeparator
+{
+    color: #000;
+    background: #D3ECF9;
+}
+
+.RadComboBox_LAWeb20 .rcbDisabled .rcbInputCell .rcbInput,
+.RadComboBoxDropDown_LAWeb20 .rcbDisabled
+{
+	color: #000;
+	cursor: default;
+}
+
+.RadComboBox_LAWeb20 .rcbDisabled td.rcbInputCellLeft { background-position: 0 -66px; }
+.RadComboBox_LAWeb20 .rcbDisabled td.rcbInputCellRight { background-position: 100% -66px; }
+.RadComboBox_LAWeb20 .rcbDisabled td.rcbArrowCellLeft { background-position: -126px -88px; }
+.RadComboBox_LAWeb20 .rcbDisabled td.rcbArrowCellRight { background-position: -108px -88px; }
+.RadComboBox_LAWeb20 .rcbDisabled .rcbReadOnly td.rcbArrowCellRight { background-position: -110px -88px; }
+.RadComboBox_LAWeb20 .rcbDisabled .rcbReadOnly td.rcbArrowCellHidden { background-position: -15px -88px; }
+
+.RadComboBoxDropDown_LAWeb20 .rcbLoading
+{
+	background: #f0f0f0;
+	text-align: center;
+}
+
+.RadComboBoxDropDown_LAWeb20 .rcbMoreResults
+{
+	clear: both;
+	border-top: 1px solid #c6c7d2;
+	background: #fff;
+	position: relative;
+	padding: 0 6px 0;
+	text-align: center;
+	margin-top: 1px;
+}
+
+.RadComboBoxDropDown_LAWeb20 .rcbMoreResults a
+{
+	display: inline-block;
+	width: 15px;
+	height: 9px;
+	background-position: -157px -94px;
+	text-indent: -9999px;
+	overflow: hidden;
+	text-decoration: none;
+	cursor: pointer;
+	vertical-align: middle;
+}
+
+* html .RadComboBoxDropDown_LAWeb20 .rcbMoreResults a
+{
+	font-size: 0;
+	line-height: 0;
+	text-indent: 0;
+}
+
+*+html .RadComboBoxDropDown_LAWeb20 .rcbMoreResults a
+{
+	font-size: 0;
+	line-height: 0;
+	text-indent: 0;
+}
+
+.RadComboBoxDropDown_LAWeb20 .rcbMoreResults span
+{
+	vertical-align: middle;
+	height: 19px;
+	line-height: 19px;
+	display: inline-block;
+}
+
+.RadComboBoxDropDown_LAWeb20 .rcbSeparatedList .rcbItem,
+.RadComboBoxDropDown_LAWeb20 .rcbSeparatedList .rcbHovered,
+.RadComboBoxDropDown_LAWeb20 .rcbSeparatedList .rcbDisabled,
+.RadComboBoxDropDown_LAWeb20 .rcbSeparatedList .rcbLoading
+{
+	padding-left: 12px;
+}
+
+.RadComboBoxDropDown_LAWeb20 .rcbSeparatedList .rcbSeparator
+{
+	padding-left: 6px;
+}
+
+/*hacks*/
+
+/*Opera start*/
+@media screen and (min-width: 550px)
+{
+	.RadComboBoxDropDown_LAWeb20_rtl .rcbItem,
+	.RadComboBoxDropDown_LAWeb20_rtl .rcbHovered,
+	.RadComboBoxDropDown_LAWeb20_rtl .rcbDisabled,
+	.RadComboBoxDropDown_LAWeb20_rtl .rcbLoading
+	{
+		padding: 2px 6px 2px 19px;
+	}
+} /*Opera end*/

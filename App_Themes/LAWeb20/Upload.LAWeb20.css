@@ -1,0 +1,117 @@
+/* RadUpload / Web20 skin */
+
+/* <general styles> */
+
+.RadUpload_LAWeb20,
+.RadUpload_LAWeb20 a,
+.RadUpload_LAWeb20 input,
+.RadUploadProgressArea_LAWeb20,
+.RadUploadProgressArea_LAWeb20 input
+{
+    font: normal 10pt/9px Arial;
+}
+
+/* </general styles> */
+
+/* <file inputs> */
+
+.RadUpload_LAWeb20 .ruStyled .ruFileInput
+{
+    border-color: #abadb3;
+}
+
+.RadUpload_LAWeb20 .ruFakeInput
+{
+    border-color: #6788be;
+    color: #333;
+}
+
+.RadUpload_LAWeb20 .ruReadOnly .ruFakeInput
+{
+	background: #f3f3f3;
+}
+
+/* </file inputs> */
+
+/* <buttons> */
+
+.RadUpload_LAWeb20 .ruButton,
+.RadUploadProgressArea_LAWeb20 .ruButton
+{
+    background-image: url('Upload/ruSprite.png');
+    color: #fff;
+}
+
+.RadUpload_LAWeb20 .ruRemove
+{
+	color: #333;
+}
+
+/* </buttons> */
+
+/* <submit button> */
+/* (use this class to style a single button for uploads) */
+
+.RadUploadSubmit
+{
+    background-image: url('Upload/ruSprite.png');
+    color: #fff;
+}
+
+/* </submit button> */
+
+/* <progress area> */
+
+.RadUploadProgressArea_LAWeb20 .ruProgress
+{
+    border-color: #6788be;
+    background-image: url('Upload/ruProgressArea.png');
+    background-color: #fff;
+}
+
+.RadUploadProgressArea_LAWeb20 ul.ruProgress
+{
+    background-position: 100% 0;
+}
+
+.RadUploadProgressArea_LAWeb20 .ruProgress li
+{
+    color: #222;
+}
+
+.RadUploadProgressArea_LAWeb20 .ruProgress li.ruCurrentFile
+{
+    color: #222;
+}
+
+.RadUploadProgressArea_LAWeb20 .ruProgress li.ruCurrentFile span
+{
+    color: #0e9312;
+}
+
+.RadUploadProgressArea_LAWeb20 .ruProgress .ruBar
+{
+    border-color: #757c84;
+    background-image: url('Upload/ruSprite.png');
+}
+ 
+.RadUploadProgressArea_LAWeb20 .ruProgress .ruBar div
+{
+    background-image: url('Upload/ruProgress.gif');
+	border-right: 1px solid #0e9312;
+}
+
+.RadUploadProgressArea_LAWeb20_rtl .ruProgress .ruBar div
+{
+	border-right: 0;
+	border-left: 1px solid #0e9312;
+    background-image: url('Upload/ruProgress.gif');
+}
+ 
+.RadUploadProgressArea_LAWeb20 .ruProgress .ruActions
+{
+	border-top-color: #bcd2f1;
+	background: #e7f1ff;
+}
+
+/* </progress area> */

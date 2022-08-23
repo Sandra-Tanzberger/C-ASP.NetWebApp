@@ -1,0 +1,137 @@
+/* RadDock for ASP.NET AJAX Web20 Skin */
+
+/* Docking Zone properties */
+.RadDockZone_LAWeb20
+{
+    border-color: #6788be;
+}
+
+/* wrappers and borders */
+.RadDockZone_LAWeb20 .rdPlaceHolder
+{
+    border-color: #6788be;
+}
+
+.RadDock_LAWeb20
+{
+    background-color: white;
+    color: #000;
+}
+
+.RadDock_LAWeb20 .rdTopBorder,
+.RadDock_LAWeb20 .rdSideBorders,
+.RadDock_LAWeb20 .rdBottomBorder
+{
+    border-color: #6788be;
+}
+
+/* titlebar and buttons */
+.RadDock_LAWeb20 .rdTitlebar
+{
+    border-color: #6788be;
+    background-color: #93b4df;
+    color: #fff;
+}
+
+.RadDock_LAWeb20 .rdHTitlebar .rdTitle
+{
+    background-image: url('Dock/rdHTitle.gif');
+    background-repeat: repeat-x;
+    background-color: #eaeaea;
+    line-height: 25px;
+}
+
+.RadDock_LAWeb20 .rdVTitlebar .rdTitle
+{
+    border-color: #6788be #6788be #6788be #fff;
+    background-color: #eaeaea;
+}
+
+.RadDock_LAWeb20 .rdHTitlebar .rdCommands
+{
+    padding: 0 3px 0 0;
+}
+
+/* right to left support */
+.RadDock_LAWeb20_rtl .rdHTitlebar .rdTitle
+{
+    padding-left: 0;
+    padding-right: 10px;
+}
+
+.RadDock_LAWeb20_rtl .rdHTitlebar .rdCommands
+{
+    padding: 0 0 0 3px;
+}
+
+.RadDock_LAWeb20 .rdHTitlebar .rdCommands a,
+.RadDock_LAWeb20 .rdVTitlebar .rdCommands a
+{
+    margin: 0 0 0 0;
+}
+
+.RadDock_LAWeb20 .rdTitlebar .rdCommands a
+{
+    background-image: url('Dock/DockCommandSprites.gif');
+    margin-left: 3px !important;
+}
+
+.RadDock_LAWeb20 .rdTitlebar .rdCollapse:hover
+{
+    background-position: -19px 0;
+}
+
+.RadDock_LAWeb20 .rdTitlebar .rdExpand:hover
+{
+    background-position: -19px -19px;
+}
+
+.RadDock_LAWeb20 .rdTitlebar .rdUnpin:hover
+{
+    background-position: -19px -38px;
+}
+
+.RadDock_LAWeb20 .rdTitlebar .rdPin:hover
+{
+    background-position: -19px -57px;
+}
+
+.RadDock_LAWeb20 .rdTitlebar .rdClose:hover
+{
+    background-position: -19px -76px;
+}
+
+.RadDock_LAWeb20 .rdTitlebar .rdCustom:hover
+{
+    background-position: -19px -95px;
+}
+
+/* drag grips */
+.RadDock_LAWeb20 .rdGripTop,
+.RadDock_LAWeb20 .rdGripLeft
+{
+    background: #6788be;
+}
+
+.RadDock_LAWeb20 .rdTopLeft,
+.RadDock_LAWeb20 .rdTopRight,
+.RadDock_LAWeb20 .rdBottomLeft,
+.RadDock_LAWeb20 .rdBottomRight,
+.RadDock_LAWeb20 .rdLeftMiddle,
+.RadDock_LAWeb20 .rdRightMiddle
+{
+	background: #6788be;
+}
+
+.RadDock_LAWeb20 .rdTopCenter, 
+.RadDock_LAWeb20 .rdBottomCenter 
+{
+	background: #6788be;
+}
+
+.RadDock_LAWeb20 .rdWrapTable .rdTitlebar,
+.RadDock_LAWeb20 .rdWrapTable .rdTitle,
+.RadDock_LAWeb20 .rdWrapTable .rdCommands
+{
+    background-image: url('Dock/rdHTitle.gif');
+}

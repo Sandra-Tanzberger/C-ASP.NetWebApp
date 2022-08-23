@@ -1,0 +1,176 @@
+/* RadSplitter for ASP.NET AJAX - Web20 Skin */
+
+/* Borders */
+.RadSplitter_LAWeb20,
+.RadSplitter_LAWeb20 .rspPaneTabContainer,
+
+/* Vertical RadSplitter items */
+.RadSplitter_LAWeb20 .rspPane, 
+.RadSplitter_LAWeb20 .rspResizeBar,
+.RadSplitter_LAWeb20 .rspSlideContainerResize,
+
+/* Horizontal RadSplitter items */
+.RadSplitter_LAWeb20 .rspPaneHorizontal,
+.RadSplitter_LAWeb20 .rspResizeBarHorizontal,
+.RadSplitter_LAWeb20 .rspSlideContainerResizeHorizontal
+{
+	border-color:#cedef4;
+}
+
+/* RadSplitBar/RadSlidingPane resize elements */
+.RadSplitter_LAWeb20 .rspResizeBar,
+.RadSplitter_LAWeb20 .rspSlideContainerResize
+{
+	background:#e3eeff url('Splitter/ResizeBarVerticalSprites.gif') repeat-y 0 0;
+    border-right-color:#839fce;
+}
+
+.RadSplitter_LAWeb20 .rspResizeBarOver,
+.RadSplitter_LAWeb20 .rspSlideContainerResizeOver
+{
+    background-position:-4px 0;
+}
+
+.RadSplitter_LAWeb20 .rspResizeBarHorizontal,
+.RadSplitter_LAWeb20 .rspSlideContainerResizeHorizontal
+{
+	background:#e3eeff url('Splitter/ResizeBarHorizontalSprites.gif') repeat-x 0 0;
+    border-bottom-color:#839fce;
+}
+
+.RadSplitter_LAWeb20 .rspResizeBarOverHorizontal,
+.RadSplitter_LAWeb20 .rspSlideContainerResizeOverHorizontal
+{
+    background-position:0 -4px;
+}
+
+/* RadSlidingPane tab */
+.RadSplitter_LAWeb20 .rspPaneTabContainer,
+/* RadSlidingPane buttons */
+.RadSplitter_LAWeb20 .rspSlideHeaderDockIcon,
+.RadSplitter_LAWeb20 .rspSlideHeaderUndockIcon,
+.RadSplitter_LAWeb20 .rspSlideHeaderCollapseIcon,
+/* RadSplitBar buttons */
+.RadSplitter_LAWeb20 .rspCollapseBarExpand,
+.RadSplitter_LAWeb20 .rspCollapseBarCollapse,
+
+.RadSplitter_LAWeb20 .rspCollapseBarHorizontalExpand,
+.RadSplitter_LAWeb20 .rspCollapseBarHorizontalCollapse
+{
+    background-image:url('Splitter/ExpandCollapseBarsCommands.gif');
+    background-repeat:no-repeat;
+}
+
+/* RadSlidingPane tab */
+.RadSplitter_LAWeb20 .rspPaneTabContainer
+{
+    background-position:-81px 0;
+    background-repeat:repeat-y;
+    background-color:#90afd7;
+}
+
+/* RadSplitBar buttons */
+.RadSplitter_LAWeb20 .rspCollapseBarCollapse
+{	
+	background-position:0 0;
+}
+.RadSplitter_LAWeb20 .rspCollapseBarCollapseOver
+{
+    background-position:-192px 0;
+}
+
+.RadSplitter_LAWeb20 .rspCollapseBarExpand
+{	
+	background-position:-4px 0;
+}
+.RadSplitter_LAWeb20 .rspCollapseBarExpandOver
+{
+    background-position:-196px 0;
+}
+
+.RadSplitter_LAWeb20 .rspCollapseBarHorizontalExpand
+{
+    background-position:-8px -4px;
+}
+.RadSplitter_LAWeb20 .rspCollapseBarHorizontalExpandOver
+{
+    background-position:-8px -12px;
+}
+
+.RadSplitter_LAWeb20 .rspCollapseBarHorizontalCollapse
+{
+    background-position:-8px 0;
+}
+.RadSplitter_LAWeb20 .rspCollapseBarHorizontalCollapseOver
+{
+    background-position:-8px -8px;
+}
+
+/* RadSlidingPane buttons */
+.RadSplitter_LAWeb20 .rspSlideHeaderUndockIcon
+{
+	background-position:-50px 0;
+}
+
+.RadSplitter_LAWeb20 .rspSlideHeaderDockIcon
+{
+	background-position:-35px 0;
+}
+
+.RadSplitter_LAWeb20 .rspSlideHeaderCollapseIcon
+{
+	background-position:-65px 0;
+}
+
+/* RadSlidingPane header */
+.RadSplitter_LAWeb20 .rspSlideHeader, 
+/* RadSlidingPane title */
+.RadSplitter_LAWeb20 .rspSlideTitleContainer,
+/* RadSlidingPane tab, SlideDirection=Top/Bottom */
+.RadSplitter_LAWeb20 .rspBottom .rspPaneTabContainer,
+.RadSplitter_LAWeb20 .rspTop .rspPaneTabContainer
+{
+	background-image:url('Splitter/slideTitleContainerBgr.gif');
+	background-repeat:repeat-x;
+}
+
+.RadSplitter_LAWeb20 .rspBottom .rspPaneTabContainer,
+.RadSplitter_LAWeb20 .rspTop .rspPaneTabContainer
+{
+    background-position:0 -1px;
+}
+
+.RadSplitter_LAWeb20 .rspTabsContainer .rspPaneTabContainerDocked
+{
+    background:#fff none;
+}
+
+/* RadSlidingPane header elements */
+.RadSplitter_LAWeb20 .rspSlideTitleContainer,
+.RadSplitter_LAWeb20 .rspSlideHeaderIconWrapper
+{
+	border-bottom:solid 1px #cedef4;
+}
+
+/* RadSlidingPane title text */
+.RadSplitter_LAWeb20 .rspSlideTitle,
+/* RadSlidingPane tab text */
+.RadSplitter_LAWeb20 .rspPaneTabText
+{
+	font:normal 10pt Arial;
+	color:#fff;
+}
+.RadSplitter_LAWeb20 .rspSlideTitle
+{	
+	font-size:10pt;
+}
+.RadSplitter_LAWeb20 .rspPaneTabContainerDocked .rspPaneTabText
+{
+    color:#4e75b3;
+}
+
+/* RadSlidingPane content - this element should not be transparent as it shows above content in adjacent RadPanes */
+.RadSplitter_LAWeb20 .rspSlideContent
+{
+	background-color:#fff;
+}

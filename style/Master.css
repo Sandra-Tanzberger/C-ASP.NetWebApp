@@ -1,0 +1,319 @@
+﻿/* Broswer Issues
+	Bug in IE 7 -- Always shows verticle scroll bar for 
+    underlying elements that exceed screen size even if
+    their overflow attribute is set to hidden
+*/
+html
+{
+	overflow: hidden;
+}
+
+/* Main Styles common */
+body
+{
+	font-family:Arial;
+	font-size: 10pt;
+	margin: 0px;
+	overflow:hidden !important; 
+}
+#headerContentPOPS
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-bottom: 1px;
+	width: 924px;
+	height: 60px;
+	background-image: url(../images/HeadBack_State.jpg);
+}
+#stSeal
+{
+	margin-top: 1px;
+	width: 57px;
+	height: 58px;
+	float: left;
+	background-image: url(../images/seal_la.gif);
+}
+#agencyLogo
+{
+	margin-top: 1px;
+	width: 45px;
+	height: 58px;
+	float: right;
+	background-image: url(../images/DHH_Logo_Small.jpg);
+}
+#pgContent
+{
+	width: 934px;
+}
+#menuContent
+{
+	width: 924px;
+	margin-bottom: 1px;
+}
+#mainContent
+{
+	font-family: Arial;
+	font-size: 10pt;
+	width: 934px;
+	overflow: auto;
+	margin-bottom: 1px;
+}
+#mainStateContent
+{
+	font-size: 10pt;
+	font-family: Arial;
+	float: right;
+	width: 924px;
+	overflow: auto;
+	margin-bottom: 1px;
+}
+#leftContent
+{
+	font-size: 10pt;
+	font-family: Arial;
+	float: left;
+	margin-right: 3px;
+	padding-top: 5px;
+	width: 125px;
+	background-image: url(../images/leftback1.jpg);
+	background-repeat: no-repeat;
+}
+#footerContent
+{
+	width: 934px;
+	height: 34px;
+	margin-top: 6px;
+	overflow: hidden;
+	font-size: 10pt;
+	font-family: Arial;
+}
+
+/* Controls elements on licensing forms */ 
+.LicensePanel
+{
+	padding-bottom: 10px;
+}
+.editForm
+{
+	background-color: #EDE99E;
+}
+.formTable
+{
+	vertical-align: bottom;
+	margin-left: 10px;
+	font-size: 10pt;
+	font-family: Arial;
+}
+.formTable .listBox
+{
+	font-size: 10pt;
+	font-family: Arial;
+}
+.formTable .formButton
+{
+	font-size: 10pt;
+	font-family: Arial;
+}
+.formTable input label
+{
+	font-size: 10pt;
+	font-family: Arial;
+}
+.formTableSectionDivChk
+{
+	padding-left: 20px;
+	font-size: 10pt;
+	font-family: Arial;
+	font-weight: normal;
+}
+.formTableSectionDiv
+{
+	width: 98%;
+	height: auto;
+	margin-left: 5px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	padding-left: 5px;
+	font-size: 10pt;
+	font-family: Arial;
+	font-weight: bold;
+	/*background-color: #CDD9E0;
+	border-top-style: solid;
+	border-top-width: 1px;*/
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	
+}
+.LicSectionInfoDiv
+{
+	width: 98%;
+	height: auto;
+	margin-left: 10px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	font-size: 10pt;
+	font-family: Arial;
+}
+.LicSectionContainer
+{
+	margin-left: 10px;
+}
+
+.readOnlyInput
+{
+	/*background-color: #BBBBBB !important;*/
+	color: #000000;
+	font-size: 10pt;
+}
+
+.readOnlyLabel
+{
+	color: #000000;
+	font-size: 10pt;
+}
+
+/* Login screen */
+.LoginDiv
+{
+	background: transparent url('../images/LoginBack.gif') no-repeat;
+	text-align: center;
+	height: 250px;
+	width: 350px;
+	position:relative;
+	padding-top: 15px;
+	padding-left: 5px;
+	top: 100px;
+	left: 287px;
+}
+.UserLogin
+{
+	width: 250px;
+	position:relative;
+	font: normal 10pt arial, sans-serif;
+}
+.UserLogin th
+{
+	font: 20px arial, sans-serif;
+}
+/* Message Popup */
+div.cluster 
+{
+	text-align:center;
+}
+
+#msgLayer 
+{
+	position: absolute;
+	visibility: hidden;
+	width: 934px;
+	text-align:center;
+	margin:0px;
+	z-index: 9999;
+}
+#msgTitle
+{
+	width: 100%;
+	height: 20px;
+	text-align: left;
+	background-color: #0066CC;
+	font-family: Arial;
+	font-size: 10pt;
+	color: #FFFFFF;
+	padding-left: 5px;
+	padding-top: 2px;
+}
+#middle
+{
+	background-color: #C0C0C0;
+	border: 1px solid #000;
+	height: 125px;
+	width: 350px;
+	z-index: 9999;
+	margin-top: 300px;
+	font-family: Arial;
+	font-size: 10pt;
+	color: Black;
+	overflow: hidden;
+}
+#msgLbl
+{
+	font-family: Arial;
+	font-size: 10pt;
+	color: #000000;
+	margin-top: 5px;
+	padding: 5px;
+}
+div#popUp 
+{
+	position: absolute;
+	visibility: hidden;
+	width: 935px;
+	filter:alpha(opacity=5);
+	-moz-opacity:0.5;
+	opacity: 0.5; 
+	background-color: #222;
+	margin:0px;
+	z-index: 9999;
+}
+
+.close 
+{
+	padding-right:5px;
+	padding-top:5px;
+	float: right;
+}
+
+div.content 
+{ 
+	margin:auto;
+	padding-top:50px;
+}
+
+div.ClassOpt
+{
+	vertical-align:top;
+	width: 98%;
+	height: auto;
+	margin-left: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding-left: 5px;
+	padding-bottom: 5px;
+	font-size: 10pt;
+	font-family: Arial;
+	font-weight: bold;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	
+}
+
+/* Print specific styles
+	SMM - These were not working from this style sheet and were embeded in the
+	print page directly to overcome the issue. Left here for future research to
+	determine why and eventually remove from page to here
+*/
+@media print 
+{
+
+	.pageHeader
+	{
+	}
+	
+	.tableHeader
+	{
+	}
+	
+	p
+	{
+	}
+	
+	.breakBefore
+	{
+		page-break-before: always; 
+	}
+	
+	.breakAfter
+	{
+	}
+	
+}

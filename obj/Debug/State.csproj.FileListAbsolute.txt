@@ -1,0 +1,5 @@
+C:\LousianaVS2012\State\bin\State.dll
+C:\LousianaVS2012\State\bin\State.pdb
+C:\LousianaVS2012\State\obj\Debug\State.dll
+C:\LousianaVS2012\State\obj\Debug\State.pdb
+C:\LousianaVS2012\State\obj\Debug\State.csprojResolveAssemblyReference.cache

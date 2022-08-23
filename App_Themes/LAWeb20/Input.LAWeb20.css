@@ -1,0 +1,176 @@
+/*Telerik RadInput Web20 Skin*/
+
+/*global*/
+
+.RadInput_LAWeb20,
+.RadInputMgr_LAWeb20
+{
+	vertical-align:middle;
+	font: 10pt arial;
+}
+
+.RadInput_LAWeb20 table
+{
+	border:0;
+	vertical-align:bottom;
+}
+
+.RadInput_LAWeb20 table.riTable td
+{
+	border:0;
+	padding:0;
+	vertical-align:middle;
+	overflow:visible;/*RadGrid*/
+}
+
+.RadInput_LAWeb20 table td.riCell
+{
+	padding-right:4px;
+}
+
+.RadInput_LAWeb20 textarea
+{
+	vertical-align:bottom;
+	overflow:auto;
+}
+
+/*textbox states*/
+
+html body .RadInput_LAWeb20 .riTextBox,
+html body .RadInputMgr_LAWeb20
+{
+	border:1px solid #6788be;
+	padding:2px 1px 3px;
+	background:#fff;
+	color:#000;
+	font: 10pt arial;
+	height:15px;
+}
+
+html body .RadInput_LAWeb20 .riEmpty,
+html body .RadInput_Empty_LAWeb20
+{
+	color:#777;
+}
+
+html body .RadInput_LAWeb20 .riHover,
+html body .RadInput_Hover_LAWeb20,
+html body .RadInput_LAWeb20 .riFocused,
+html body .RadInput_Focused_LAWeb20
+{
+	border-color:#3f5f94;
+}
+
+html body .RadInput_LAWeb20 .riRead,
+html body .RadInput_Read_LAWeb20
+{
+	border-color:#bebebe;
+}
+
+html body .RadInput_LAWeb20 .riDisabled,
+html body .RadInput_Disabled_LAWeb20
+{
+	border-color:#bebebe;
+	color:#777;
+	cursor:default;
+}
+
+html body .RadInput_LAWeb20 .riError,
+html body .RadInput_Error_LAWeb20,
+.RadForm.rfdTextbox .RadInput_LAWeb20 .riError[type="text"],
+.RadForm.rfdTextbox .RadInput_Error_LAWeb20[type="text"]
+{
+	border-color:#d24000;
+	background:#fff 100% -298px no-repeat url('Input/sprite.gif');
+	color:#b32d34;
+}
+
+html body .RadInput_LAWeb20 .riNegative,
+html body .RadInput_Negative_LAWeb20
+{
+	color:#444;
+}
+
+/*IE quirks mode*/
+* html .RadInput_LAWeb20 input.riTextBox,
+* html input.RadInputMgr_LAWeb20
+{
+	height /**/:22px;
+}
+
+/*buttons*/
+
+.RadInput_LAWeb20 a
+{
+	display:block;
+	overflow:hidden;
+	position:relative;/*FF*/
+	outline:none;/*FF*/
+	z-index:2;/*Opera*/
+	background:transparent no-repeat url('Input/sprite.gif');
+	text-indent:-2222px;
+	text-align:center;
+	text-decoration:none;
+}
+* html .RadInput_LAWeb20 a{position:static}/*IE6*/
+*+html .RadInput_LAWeb20 a{position:static}/*IE7*/
+
+/*go*/
+
+.RadInput_LAWeb20 .riBtn a
+{
+	width:20px;
+	height:18px;
+	line-height:18px;
+	background-position:3px 5px;
+}
+
+.RadInput_LAWeb20 .riBtn a:hover
+{
+	background-position:3px -45px;
+}
+
+/*spin*/
+
+.RadInput_LAWeb20 .riSpin a
+{
+	width:15px;
+	height:7px;
+	line-height:7px;
+	margin:0 1px;
+}
+
+.RadInput_LAWeb20 .riUp
+{
+	background-position:4px -98px;
+}
+
+.RadInput_LAWeb20 .riUp:hover
+{
+	background-position:4px -148px;
+}
+
+.RadInput_LAWeb20 a.riDown
+{
+	background-position:4px -199px;
+	margin-top:3px;
+}
+
+* html .RadInput_LAWeb20 a.riDown
+{
+	margin-top /**/:0;
+}
+
+.RadInput_LAWeb20 a.riDown:hover
+{
+	background-position:4px -249px;
+}
+
+/*label*/
+
+.RadInput_LAWeb20 .riLabel
+{
+	margin:0 4px 0 0;
+	color:#000;
+	white-space:nowrap;
+}

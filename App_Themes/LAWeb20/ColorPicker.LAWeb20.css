@@ -1,0 +1,147 @@
+/* ColorPicker/ColorPickerSprites.gif */
+
+/* RadColorPicker Web 2.0 skin */
+
+.RadColorPicker_LAWeb20 .rcpPalette
+{
+	border: solid 1px #6788be;
+	background: #fff;
+}
+
+.RadColorPicker_LAWeb20 .rcpPalette a
+{
+	border: solid 1px #c5c5c5;
+}
+
+.RadColorPicker_LAWeb20 ul li a.rcpSelectedColor
+{
+	border: solid 1px black;
+}
+
+.RadColorPicker_LAWeb20 .rcpColorPreview
+{
+	border: solid 1px #b8b8b8;
+	border-top: solid 1px #8e8e8e;
+	background-color: white;
+}
+
+.RadColorPicker_LAWeb20 .rcpInput,
+.RadColorPicker_LAWeb20 .rcpHexInput
+{
+    color: black;
+    border: solid 1px #b8b8b8;
+	border-top: solid 1px #8e8e8e;
+}
+
+/* no color button */
+.RadColorPicker_LAWeb20 .rcpEmptyColor
+{
+	background-image: url('ColorPicker/ColorPickerSprites.gif');
+	background-position: right -52px;
+}
+
+.RadColorPicker_LAWeb20 .rcpEmptyColor span
+{
+    color:black;
+}
+
+/* color picker rcpIcon */
+.RadColorPicker_LAWeb20 .rcpIcon a,
+.RadColorPicker_LAWeb20 .rcpIcon a:hover,
+.RadColorPicker_LAWeb20 .rcpIcon a:active,
+.RadColorPicker_LAWeb20 .rcpIcon a:focus
+{
+	background-image: url('ColorPicker/ColorPickerSprites.gif');
+}
+
+.RadColorPicker_LAWeb20 .rcpIcon a
+{
+	background-position: 0 -52px;
+}
+
+.RadColorPicker_LAWeb20 .rcpIcon a:hover
+{
+	background-position: 0 -73px;
+}
+
+.RadColorPicker_LAWeb20 .rcpIcon a:active,
+.RadColorPicker_LAWeb20 .rcpIcon a:focus
+{
+	background-position: 0 -94px;
+}
+
+/* colorpicker mode tabs */
+.RadColorPicker_LAWeb20 .rcpTabs
+{
+    background: #fff;
+    background-image: url('ColorPicker/ColorPickerSprites.gif');
+    background-position: 0 -169px;
+}
+
+.RadColorPicker_LAWeb20 .rcpTabs ul li a
+{
+    background-image: url('ColorPicker/ColorPickerSprites.gif');
+    color: black;
+}
+
+.RadColorPicker_LAWeb20 .rcpTabs ul li a span
+{
+    background-image: url('ColorPicker/ColorPickerSprites.gif');
+    color: white;
+}
+
+.RadColorPicker_LAWeb20 .rcpTabs ul li.rcpSelectedTab a
+{
+    background-image: url('ColorPicker/ColorPickerSprites.gif');
+    background-position: right -26px;
+}
+
+.RadColorPicker_LAWeb20 .rcpTabs ul li.rcpSelectedTab a span
+{
+    background-image: url('ColorPicker/ColorPickerSprites.gif');
+    background-position: left -26px;
+    color: #0f3789;
+}
+
+/* apply color button */
+.RadColorPicker_LAWeb20 .rcpApplyButton
+{
+    background-position: right -115px;
+    background-image: url('ColorPicker/ColorPickerSprites.gif');
+}
+
+.RadColorPicker_LAWeb20 .rcpApplyButton span
+{
+    background-image: url('ColorPicker/ColorPickerSprites.gif');
+    background-position: 0 -115px;
+    color: #fff;
+}
+
+.RadColorPicker_LAWeb20 .rcpApplyButton:hover
+{
+    background-image: url('ColorPicker/ColorPickerSprites.gif');
+    background-position: right -136px;
+}
+
+.RadColorPicker_LAWeb20 .rcpApplyButton:hover span
+{
+    background-image: url('ColorPicker/ColorPickerSprites.gif');
+    background-position: 0 -136px;
+    color: #0f3789;
+}
+
+.RadColorPicker_LAWeb20 .rcpMillionColorsPalette
+{
+    border: solid 1px black;
+}
+
+.RadColorPicker_LAWeb20 .rcpMillionColorsHandle
+{
+    background: transparent url('ColorPicker/ColorPickerSprites.gif') no-repeat -1009px -73px;
+}
+
+.RadColorPicker_LAWeb20 div.rcpMillionColorsSlider div.rslVertical a.rslDraghandle
+{
+    background: url('ColorPicker/ColorPickerSprites.gif') no-repeat -1002px -88px;
+    margin-left: -5px;
+}
